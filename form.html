@@ -13,7 +13,12 @@
 				Logo	
 			</div>
 			<nav class="main-nav">
-                Menu
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="#">Информация</a></li>
+                    <li class="main-nav__item"><a href="#">Возможности</a></li>
+                    <li class="main-nav__item"><a href="#">Отзывы</a></li>
+                    <li class="main-nav__item"><a href="#">Стоимость</a></li>
+                </ul>
             </nav>
 		</div>
 	</header>
@@ -22,28 +27,33 @@
 
     <form action="#" class="main-form">
         <fieldset class="main-form__name">
-            <label for="">ИМЯ: *</label>
-            <input type="text" placeholder="Введите ваше имя">
+            <label for="" class="field-text">
+                <span class="field-text__text">ИМЯ: *</span><input type="text" placeholder="Введите ваше имя">
+            </label>
 
-            <label for="">ФАМИЛИЯ: *</label>
-            <input type="text" placeholder="Укажите фамилию">
+            <label for="" class="field-text">
+                <span class="field-text__text">ФАМИЛИЯ: *</span><input type="text" placeholder="Укажите фамилию">
+            </label>
 
-            <label for="">ОТЧЕСТВО:</label>
-            <input type="text" placeholder="Ну и отчество тоже">
+            <label for="" class="field-text">
+                <span class="field-text__text">ОТЧЕСТВО:</span><input type="text" placeholder="Ну и отчество тоже">
+            </label>
         </fieldset>
 
         <fieldset class="main-form__app">
             <h2>С каким приложением путешествовали? *</h2>
+            
+            <label for="" class="field-text">
+                <input type="radio" name="app"><span class="field-text__text">Pink для iOs</span>
+            </label>
 
-            <input type="radio" name="app">
-            <label for="">Pink для iOs</label>
+            <label for="" class="field-text">
+                <input type="radio" name="app"><span class="field-text__text">Pink для Android</span>
+            </label>
 
-            <input type="radio" name="app">
-            <label for="">Pink для Android</label>
-
-
-            <input type="radio" name="app">
-            <label for="">Windows Phone</label>
+            <label for="" class="field-text">
+                <input type="radio" name="app"><span class="field-text__text">Windows Phone</span>
+            </label>
         </fieldset>
 
         <fieldset class="main-form__when">
@@ -61,6 +71,13 @@
 
         <fieldset class="main-form__partners">
             <h2>КОЛИЧЕСТВО ПОПУТЧИКОВ *</h2>
+
+            <input type="range">
+
+            <ul class="main-form__partners__list">
+                <li class="main-form__partners__item"></li>
+                <li class="main-form__partners__item"></li>
+            </ul>
 
             <table class="main-form__partners__table">
                 <tr>
@@ -139,13 +156,15 @@
         <fieldset class="main-form__photo">
             <h2>ВАШИ ФОТОГРАФИИ ИЗ ПОЕЗДКИ *</h2>
 
-            <button>ЗАГРУЗИТЬ ФОТО</button>
+            <label for="" class="field-text">
+                <span class="field-text__text">ЗАГРУЗИТЬ ФОТО</span><input type="file" name="upload-photo">
+            </label>
 
             <hr>
         </fieldset>
         
         <fieldset class="main-form__end">
-            <input type="submit">
+            <input type="submit" value="Отправить форму">
 
             <p><span>*</span> — обязательные поля</p>
         </fieldset>
@@ -158,10 +177,10 @@
             
         </div>
 
-        <ul class="social">
-            <li class="item"><a href="#">tw</a></li>
-            <li class="item"><a href="#">fb</a></li>
-            <li class="item"><a href="#">yt</a></li>
+        <ul class="social-links">
+            <li><a class="social-links__item-tw" href="#">tw</a></li>
+            <li><a class="social-links__item-fb" href="#">fb</a></li>
+            <li><a class="social-links__item-yt" href="#">yt</a></li>
         </ul>
 
         <div class="createBy">
