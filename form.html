@@ -7,11 +7,11 @@
   </head>
   <body>
 
-	<header class="header">
+	<header class="page-header">
 		<div class="header__inner">
-			<div class="logo">
+			<a class="logo" href="#">
 				Logo	
-			</div>
+			</a>
 			<nav class="main-nav">
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a href="#">Информация</a></li>
@@ -19,171 +19,222 @@
                     <li class="main-nav__item"><a href="#">Отзывы</a></li>
                     <li class="main-nav__item"><a href="#">Стоимость</a></li>
                 </ul>
+                <a href="" class="main-nav__hamburger" id="toggler"><span></span></a>
             </nav>
 		</div>
+
+        <p class="main-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
 	</header>
     
-    <p class="main-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>    
+        
 
     <form action="#" class="main-form">
         <fieldset class="main-form__name">
-            <label for="" class="field-text">
+            <label class="field-text">
                 <span class="field-text__text">ИМЯ: *</span><input type="text" placeholder="Введите ваше имя">
             </label>
 
-            <label for="" class="field-text">
+            <label class="field-text">
                 <span class="field-text__text">ФАМИЛИЯ: *</span><input type="text" placeholder="Укажите фамилию">
             </label>
 
-            <label for="" class="field-text">
+            <label class="field-text">
                 <span class="field-text__text">ОТЧЕСТВО:</span><input type="text" placeholder="Ну и отчество тоже">
             </label>
         </fieldset>
 
         <fieldset class="main-form__app">
-            <h2>С каким приложением путешествовали? *</h2>
+            <legend>С каким приложением путешествовали? *</legend>
             
-            <label for="" class="field-text">
-                <input type="radio" name="app"><span class="field-text__text">Pink для iOs</span>
+            <label class="field-radio">
+                <input type="radio" name="app"><span class="field-radio__text">Pink для iOs</span>
             </label>
 
-            <label for="" class="field-text">
-                <input type="radio" name="app"><span class="field-text__text">Pink для Android</span>
+            <label class="field-radio">
+                <input type="radio" name="app"><span class="field-radio__text">Pink для Android</span>
             </label>
 
-            <label for="" class="field-text">
-                <input type="radio" name="app"><span class="field-text__text">Windows Phone</span>
+            <label class="field-radio">
+                <input type="radio" name="app"><span class="field-radio__text">Windows Phone</span>
             </label>
         </fieldset>
 
         <fieldset class="main-form__when">
-            <h2>КОГДА ВЫ ПУТЕШЕСТВОВАЛИ? *</h2>
+            <legend>КОГДА ВЫ ПУТЕШЕСТВОВАЛИ? *</legend>
             
-            <input type="date">
-            <h2>ДАТА ВЫЕЗДА</h2>
+            <label class="field-text">
+                <input type="text" placeholder="1 апреля 2015"><span class="field-text__text">ДАТА ВЫЕЗДА</span>
+            </label>
 
-            <input type="range">
-             <h2>ПРОДОЛЖИТЕЛЬНОСТЬ</h2>
+            <label class="field-range">
+                <span class="field-range__less"></span>
+                <input type="range"><span class="field-range__text">10 дней</span>
+                <span class="field-range__more"></span>
+                <span class="field-range__title">ПРОДОЛЖИТЕЛЬНОСТЬ</span>
+            </label>
 
-             <input type="date">
-             <h2>ДАТА ВОЗВРАЩЕНИЯ</h2>
+            <label class="field-text">
+                <input type="text" disabled placeholder="1 апреля 2015"><span class="field-text__text">ДАТА ВОЗВРАЩЕНИЯ</span>
+            </label>
+
+             
         </fieldset>
 
         <fieldset class="main-form__partners">
-            <h2>КОЛИЧЕСТВО ПОПУТЧИКОВ *</h2>
+            <legend>КОЛИЧЕСТВО ПОПУТЧИКОВ *</legend>
 
-            <input type="range">
+            <label class="field-range">
+                <span class="field-range__less"></span>
+                <input type="range" disabled><span class="field-range__text">2 чел</span>
+                <span class="field-range__more"></span>
+            </label>
 
             <ul class="main-form__partners__list">
                 <li class="main-form__partners__item"></li>
                 <li class="main-form__partners__item"></li>
             </ul>
 
-            <table class="main-form__partners__table">
-                <tr>
-                    <td>
-                        №
-                    </td>
-                    <td>
-                        ИМЯ: *
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        Введите ваше имя
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>ПРОЗВИЩЕ:</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Ну как же без этого!</td>
-                </tr>
-                <tr>
-                    <td>
-                        №
-                    </td>
-                    <td>
-                        ИМЯ: *
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        Введите ваше имя
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>ПРОЗВИЩЕ:</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Ну как же без этого!</td>
-                </tr>
-            </table>
+            <ul class="main-form__partners-list">
+                <li class="main-form__partners-item">
+                    <label class="field-text">
+                        <span class="field-text__text field-text__text--number">ИМЯ: *</span><input type="text" placeholder="Введите ваше имя">
+                    </label>
+                </li>
+                <li class="main-form__partners-item">
+                    <label class="field-text">
+                        <span class="field-text__text">ПРОЗВИЩЕ: </span><input type="text" placeholder="Ну как же без этого!">
+                    </label>
+                </li>
+                <li class="main-form__partners-item">
+                    <label class="field-text">
+                        <span class="field-text__text field-text__text--number">ИМЯ: *</span><input type="text" placeholder="Введите ваше имя">
+                    </label>
+                </li>
+                <li class="main-form__partners-item">
+                    <label class="field-text">
+                        <span class="field-text__text">ПРОЗВИЩЕ: </span><input type="text" placeholder="Ну как же без этого!">
+                    </label>
+                </li>
+            </ul>
         </fieldset>
 
         <fieldset class="main-form__features">
-            <h2>ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</h2>
+            <legend>ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</legend>
+            
+            <label class="field-checkbox">
+                <input type="checkbox"><span class="field-checkbox__text">Сделал селфи с акулой</span>
+            </label>
 
-            <input type="checkbox">
-            <label for="">Сделал селфи с акулой</label>
+            <label class="field-checkbox">
+                <input type="checkbox"><span class="field-checkbox__text">Обгорел на пляже</span>
+            </label>
 
-            <input type="checkbox">
-            <label for="">Обгорел на пляже</label>
+            <label class="field-checkbox">
+                <input type="checkbox"><span class="field-checkbox__text">Видел Чака Норриса</span>
+            </label>
 
-            <input type="checkbox">
-            <label for="">Видел Чака Норриса</label>
+            <label class="field-checkbox">
+                <input type="checkbox"><span class="field-checkbox__text">Накупил сувениров</span>
+            </label>
 
-            <input type="checkbox">
-            <label for="">Накупил сувениров</label>
+            <label class="field-checkbox">
+                <input type="checkbox"><span class="field-checkbox__text">Удержал башню</span>
+            </label>
 
-            <input type="checkbox">
-            <label for="">Удержал башню</label>
-
-            <input type="checkbox">
-            <label for="">Разгромил отель</label>
+            <label class="field-checkbox">
+                <input type="checkbox"><span class="field-checkbox__text">Разгромил отель</span>
+            </label>
         </fieldset>
 
         <fieldset class="main-form__photo">
-            <h2>ВАШИ ФОТОГРАФИИ ИЗ ПОЕЗДКИ *</h2>
+            <legend>ВАШИ ФОТОГРАФИИ ИЗ ПОЕЗДКИ *</legend>
 
-            <label for="" class="field-text">
-                <span class="field-text__text">ЗАГРУЗИТЬ ФОТО</span><input type="file" name="upload-photo">
+            <label class="field-photo">
+                <span class="field-photo__text">ЗАГРУЗИТЬ ФОТО</span><input type="file" multiple name="upload-photo">
             </label>
 
-            <hr>
+            <ul class="photo-list">
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+                <li class="photo-list__item">
+                    <a href="">
+                        <img src="" alt="">
+                        <span class="__title"></span>
+                        <span class="__close"></span>
+                    </a>
+                </li>
+            </ul>
+
         </fieldset>
         
         <fieldset class="main-form__end">
-            <input type="submit" value="Отправить форму">
+            <input class="field-submit" type="submit" value="Отправить форму">
 
-            <p><span>*</span> — обязательные поля</p>
+            <p class="main-form__required"><span>*</span> — обязательные поля</p>
         </fieldset>
 
     </form>
 
-    <footer class="footer">
+    <footer class="page-footer">
         
-        <div class="logo">
-            
-        </div>
+        <a href="#" class="logo">
+            Logo
+        </a>
 
         <ul class="social-links">
-            <li><a class="social-links__item-tw" href="#">tw</a></li>
-            <li><a class="social-links__item-fb" href="#">fb</a></li>
-            <li><a class="social-links__item-yt" href="#">yt</a></li>
+            <li><a class="social-links__tw" href="#">Мы в Twitter</a></li>
+            <li><a class="social-links__fb" href="#">Мы в Facebook</a></li>
+            <li><a class="social-links__yt" href="#">Мы на YouTube</a></li>
         </ul>
 
-        <div class="createBy">
+        <div class="developer-copy">
             <p>Разработано</p>
         </div>
     </footer>    
