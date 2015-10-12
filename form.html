@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: pink</title>
+  <!-- <link rel="stylesheet" href="css/style.css">--></head>
+<body>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <a class="logo" href="#">Logo</a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">Информация</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Возможности</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Отзывы</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Стоимость</a>
+          </li>
+        </ul>
+        <a href="" class="main-nav__hamburger" id="toggler">
+          <span></span>
+        </a>
+      </nav>
+    </div>
+    <p class="main-text">
+      Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+    </p>
+  </header>
+
+  <form action="#" class="main-form">
+    <fieldset class="main-form__name">
+      <label class="field-text">
+        <span class="field-text__text">ИМЯ: *</span>
+        <input type="text" placeholder="Введите ваше имя"></label>
+      <label class="field-text">
+        <span class="field-text__text">ФАМИЛИЯ: *</span>
+        <input type="text" placeholder="Укажите фамилию"></label>
+      <label class="field-text">
+        <span class="field-text__text">ОТЧЕСТВО:</span>
+        <input type="text" placeholder="Ну и отчество тоже"></label>
+    </fieldset>
+    <fieldset class="main-form__app">
+      <legend>С каким приложением путешествовали? *</legend>
+
+      <label class="field-radio">
+        <input type="radio" name="app">
+        <span class="field-radio__text">Pink для iOs</span>
+      </label>
+      <label class="field-radio">
+        <input type="radio" name="app">
+        <span class="field-radio__text">Pink для Android</span>
+      </label>
+      <label class="field-radio">
+        <input type="radio" name="app">
+        <span class="field-radio__text">Windows Phone</span>
+      </label>
+    </fieldset>
+    <fieldset class="main-form__when">
+      <legend>КОГДА ВЫ ПУТЕШЕСТВОВАЛИ? *</legend>
+
+      <label class="field-text">
+        <input type="text" placeholder="1 апреля 2015">
+        <span class="field-text__text">ДАТА ВЫЕЗДА</span>
+      </label>
+      <label class="field-range">
+        <span class="field-range__less"></span>
+        <input type="range" value="10 дней">
+        <span class="field-range__more"></span>
+        <span class="field-range__title">ПРОДОЛЖИТЕЛЬНОСТЬ</span>
+      </label>
+      <label class="field-text">
+        <input type="text" disabled placeholder="1 апреля 2015">
+        <span class="field-text__text">ДАТА ВОЗВРАЩЕНИЯ</span>
+      </label>
+
+    </fieldset>
+    <fieldset class="main-form__partners">
+      <legend>КОЛИЧЕСТВО ПОПУТЧИКОВ *</legend>
+      <label class="field-range">
+        <span class="field-range__less"></span>
+        <input type="range" disabled value="2 чел">
+        <span class="field-range__more"></span>
+      </label>
+      <ul class="main-form__partners-list">
+        <li class="main-form__partners-item">
+          <label class="field-text">
+            <span class="field-text__text field-text__text--number">ИМЯ: *</span>
+            <input type="text" placeholder="Введите ваше имя"></label>
+        </li>
+        <li class="main-form__partners-item">
+          <label class="field-text">
+            <span class="field-text__text">ПРОЗВИЩЕ:</span>
+            <input type="text" placeholder="Ну как же без этого!"></label>
+        </li>
+        <li class="main-form__partners-item">
+          <label class="field-text">
+            <span class="field-text__text field-text__text--number">ИМЯ: *</span>
+            <input type="text" placeholder="Введите ваше имя"></label>
+        </li>
+        <li class="main-form__partners-item">
+          <label class="field-text">
+            <span class="field-text__text">ПРОЗВИЩЕ:</span>
+            <input type="text" placeholder="Ну как же без этого!"></label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="main-form__features">
+      <legend>ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</legend>
+
+      <label class="field-checkbox">
+        <input type="checkbox">
+        <span class="field-checkbox__text">Сделал селфи с акулой</span>
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox">
+        <span class="field-checkbox__text">Обгорел на пляже</span>
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox">
+        <span class="field-checkbox__text">Видел Чака Норриса</span>
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox">
+        <span class="field-checkbox__text">Накупил сувениров</span>
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox">
+        <span class="field-checkbox__text">Удержал башню</span>
+      </label>
+      <label class="field-checkbox">
+        <input type="checkbox">
+        <span class="field-checkbox__text">Разгромил отель</span>
+      </label>
+    </fieldset>
+    <fieldset class="main-form__photo">
+      <legend>ВАШИ ФОТОГРАФИИ ИЗ ПОЕЗДКИ *</legend>
+      <label class="field-photo">
+        <span class="field-photo__text">ЗАГРУЗИТЬ ФОТО</span>
+        <input type="file" multiple name="upload-photo"></label>
+      <ul class="photo-list">
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+        <li class="photo-list__item">
+          <img src="" alt="">
+          <span class="photo-list__title"></span>
+          <span class="photo-list__close"></span>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="main-form__end">
+      <input class="field-submit" type="submit" value="Отправить форму">
+      <p class="main-form__required">
+        <span>*</span>
+        — обязательные поля
+      </p>
+    </fieldset>
+  </form>
+  <footer class="page-footer">
+
+    <a href="#" class="logo">Logo</a>
+    <ul class="social-links">
+      <li>
+        <a class="social-links__tw" href="#">Мы в Twitter</a>
+      </li>
+      <li>
+        <a class="social-links__fb" href="#">Мы в Facebook</a>
+      </li>
+      <li>
+        <a class="social-links__yt" href="#">Мы на YouTube</a>
+      </li>
+    </ul>
+    <div class="developer-copy">
+      <p>Разработано</p>
+    </div>
+  </footer>
+  <!-- <script src="js/script.js"></script>
+-->
+</body>
+</html>
