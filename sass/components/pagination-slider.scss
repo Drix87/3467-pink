@@ -1,0 +1,23 @@
+.pagination-slider {
+
+	&__item {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		border: 3px solid $text-white;
+		background-color: $text-gray;
+		box-sizing: border-box;
+
+		&:hover {
+			cursor: pointer;
+			border: 3px solid $text-color;
+			background-color: transparent;
+		}
+	}
+
+	&__item--active {
+		border: 3px solid $text-color;
+		background-color: transparent;
+	}
+}

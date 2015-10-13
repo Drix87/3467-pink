@@ -1,0 +1,26 @@
+.contacts {
+	@include mobile; 
+
+	&__header {
+		@include title;
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		margin-bottom: 20px;
+	}
+
+	&__item-title {
+		font-size: $font-h2;
+		font-weight: bold;
+	}
+
+	&__item-content {
+		display: block;
+		font-size: $font-h1;
+		color: $text-red;
+		font-weight: 200;
+		text-decoration: none;
+		
+	}
+}

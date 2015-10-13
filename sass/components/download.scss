@@ -1,17 +1,19 @@
 .download {
-	background: #1d2631;
+	@include mobile;
+	background: $dark-blue;
 	color: #ffffff;
 	padding-top: 30px;
 	padding-bottom: 35px;
 	text-align: center;
 
 	&__list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
 
 		li {
 			display: inline-block;
+
+			&:last-child a {
+				margin-right: 0; 
+			}
 		}
 	}
 

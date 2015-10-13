@@ -1,11 +1,34 @@
 @import "variables";
+@import "mixins";
 @import "components/header";
 @import "components/main-nav__hamburger";
 @import "components/download";
 @import "components/btn-bordered";
 @import "components/promo";
+@import "components/testimonials";
+@import "components/pagination-slider";
+@import "components/tariff";
+@import "components/contacts";
 
 
 body {
 	font-family: Open Sans, Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	margin: 0;
+}
+
+article h1, 
+aside h1, 
+nav h1, 
+section h1 {
+	margin: 0;
 }

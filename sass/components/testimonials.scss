@@ -1,0 +1,20 @@
+.testimonials {
+	@include mobile;
+	padding-top: 50px;
+	margin-bottom: 40px;
+
+	&__blockquote {
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: center;
+
+		p {
+			font: $font-p;
+		}
+
+		footer {
+			font-size: $font-h2;
+			font-weight: bold;
+		}
+	}
+}
