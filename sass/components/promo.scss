@@ -1,7 +1,7 @@
 .promo {
 	@include mobile;
 	padding-bottom: 295px;
-	background: $bg-side url("../img/iphone-bg.png") center 660px no-repeat;
+	background: $bg-side url("../img/iphone-bg.png") center 740px no-repeat;
 	background-size: 157px 320px;
 	overflow: hidden;
 	position: relative;
@@ -16,24 +16,34 @@
 
 	&__title-text {
 		display: block;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 75px;
+		}
 	}
 
 	&__features {
-		padding-top: 252px;
+		padding-top: 290px;
 
 		&:before {
-			// content: "";
-			// display: block;
-			// height: 500px;
-			// transform: rotate(-8deg);
-			// margin-top: -400px;
-			// margin-left: -100px;
+			content: "";
+			display: block;
+			height: 53px;
+			width: 326px;
+			transform: rotate(-6deg);
+			margin-top: -58px;
+			margin-left: -20px;
+			background: $bg-side;
 		}
 
 		p { 
 			font: $font-p;
 		}
+	}
+
+	&__features-item {
+		margin-bottom: 30px;
 	}
 
 	&__feature-title {

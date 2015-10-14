@@ -1,8 +1,38 @@
 .tariff {
 	@include mobile;
 	background: $bg-side;
-	padding-top: 65px;
+	padding-top: 120px;
 	padding-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 60px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// width: 326px;
+		// transform: rotate(-6deg);
+		// margin-top: -58px;
+		// margin-left: -20px;
+		background: $text-white;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		width: 110%;
+		height: 40px;
+		position: absolute;
+		top: 100px;
+		transform: rotate(-5deg);
+		margin-top: -58px;
+		margin-left: -20px;
+		background: $bg-side;
+	}
 
 	&__items {
 		overflow: hidden;
