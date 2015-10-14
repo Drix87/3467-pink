@@ -1,5 +1,6 @@
 .contacts {
 	@include mobile; 
+	margin-bottom: 40px;
 
 	&__header {
 		@include title;
