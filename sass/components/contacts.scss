@@ -3,7 +3,9 @@
 	margin-bottom: 40px;
 
 	&__header {
-		@include title;
+		font-size: $font-h1;
+		font-weight: 200;
+		background: $text-white;
 		margin-bottom: 30px;
 	}
 

@@ -7,7 +7,9 @@
 	position: relative;
 	
 	&__title {
-		@include title;
+		font-size: $font-h1;
+		font-weight: 200;
+		background: $text-white;
 		position: absolute;
 		left: 0;
 		width: 100%;
