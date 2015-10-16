@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 @import "variables";
 @import "mixins";
 @import "components/base";
-@import "components/header";
+@import "components/page-header";
 @import "components/main-nav";
 @import "components/download";
 @import "components/btn-bordered";
@@ -11,27 +11,4 @@
 @import "components/pagination-slider";
 @import "components/tariff";
 @import "components/contacts";
-@import "components/map";
-
-
-body {
-	font-family: Open Sans, Arial, sans-serif;
-	box-sizing: border-box;
-}
-
-ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-blockquote {
-	margin: 0;
-}
-
-article h1, 
-aside h1, 
-nav h1, 
-section h1 {
-	margin: 0;
-}
+@import "components/map"; 

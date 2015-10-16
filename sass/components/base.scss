@@ -1,0 +1,25 @@
+@include font-face('Open SansRegular','OpenSansRegular');
+@include font-face('Open SansLight','OpenSansLight');
+@include font-face('Open SansBold','OpenSansBold');
+
+body {
+	font-family: "Open SansRegular", Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	margin: 0;
+}
+
+article h1, 
+aside h1, 
+nav h1, 
+section h1 {
+	margin: 0;
+}

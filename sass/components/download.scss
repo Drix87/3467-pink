@@ -41,15 +41,14 @@
 		font: $font-p;
 		color: $text-white;
 	}
-}
 
-@media (max-width: $mobile) {
+	@media (max-width: $mobile) {
 
-	.download {
-		width: $mobile; 
-		margin: 0 auto;
-		text-align: center;
-		padding: 30px 20px 35px;
-		box-sizing: border-box;
+			width: $mobile; 
+			margin: 0 auto;
+			text-align: center;
+			padding: 30px 20px 35px;
+			box-sizing: border-box;
 	}
 }
+

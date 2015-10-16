@@ -11,15 +11,13 @@
 		border-width: 35px 160px 0 160px;
 		border-color: $text-white transparent transparent transparent;
 	}
-}
 
-@media (max-width: $mobile) {
+	@media (max-width: $mobile) {
 
-	.map {
-		width: $mobile; 
-		margin: 0 auto;
-		text-align: center;
-		padding: 0;
-		box-sizing: border-box;
+			width: $mobile; 
+			margin: 0 auto;
+			text-align: center;
+			padding: 0;
+			box-sizing: border-box;
 	}
 }

@@ -49,15 +49,13 @@
 	&__feature-title {
 		font-size: $font-h2;
 	}
-}
 
-@media (max-width: $mobile) {
+	@media (max-width: $mobile) {
 
-	.promo {
-		width: $mobile; 
-		margin: 0 auto;
-		text-align: center;
-		padding: 0 20px 295px;
-		box-sizing: border-box;
+			width: $mobile; 
+			margin: 0 auto;
+			text-align: center;
+			padding: 0 20px 295px;
+			box-sizing: border-box;
 	}
 }

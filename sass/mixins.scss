@@ -1,9 +1,17 @@
-@mixin mobile {
-	// width: 320px; 
-	// margin: 0 auto;
-	// text-align: center;
-	// padding: 0px 20px;
-	// box-sizing: border-box; 
+//Usage: @include font-face('Kent Medium','KentMed', normal (optional), bold (optional));
+@mixin font-face($fontname,$filename,$fontstyle: normal,$fontweight: normal) {
+	@font-face {
+	font-family: '#{$fontname}'; 
+	src: url('../font/#{$filename}/#{$filename}.eot'); 
+	src: url('../font/#{$filename}/#{$filename}.eot?#iefix') format('embedded-opentype'),
+		 url('../font/#{$filename}/#{$filename}.woff') format('woff'),
+		 url('../font/#{$filename}/#{$filename}.ttf') format('truetype'), 
+		 url('../font/#{$filename}/#{$filename}.svg##{$filename}') format('svg');
+		//svg id supports mixed case and hyphens inside, see http://j.mp/U7A83a
+
+		font-style: $fontstyle;
+		font-weight: $fontweight;
+	}
 }
 
 
