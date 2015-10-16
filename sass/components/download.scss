@@ -1,9 +1,6 @@
 .download {
-	@include mobile;
 	background: $dark-blue;
 	color: #ffffff;
-	padding-top: 30px;
-	padding-bottom: 35px;
 	text-align: center;
 
 	&__list {
@@ -43,5 +40,16 @@
 	&__text {
 		font: $font-p;
 		color: $text-white;
+	}
+}
+
+@media (max-width: $mobile) {
+
+	.download {
+		width: $mobile; 
+		margin: 0 auto;
+		text-align: center;
+		padding: 30px 20px 35px;
+		box-sizing: border-box;
 	}
 }

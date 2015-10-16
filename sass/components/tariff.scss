@@ -1,8 +1,5 @@
 .tariff {
-	@include mobile;
 	background: $bg-side;
-	padding-top: 120px;
-	padding-bottom: 40px;
 	position: relative;
 	overflow: hidden;
 
@@ -122,5 +119,16 @@
 		background: url("../img/no.png") no-repeat;
 		width: 26px;
 		height: 26px;
+	}
+}
+
+@media (max-width: $mobile) {
+
+	.tariff {
+		width: $mobile; 
+		margin: 0 auto;
+		text-align: center;
+		padding: 120px 20px 40px;
+		box-sizing: border-box;
 	}
 }

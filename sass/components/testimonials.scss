@@ -1,6 +1,4 @@
 .testimonials {
-	@include mobile;
-	padding-top: 50px;
 
 	&__blockquote {
 		display: flex;
@@ -15,5 +13,16 @@
 			font-size: $font-h2;
 			font-weight: bold;
 		}
+	}
+}
+
+@media (max-width: $mobile) {
+
+	.testimonials {
+		width: $mobile; 
+		margin: 0 auto;
+		text-align: center;
+		padding: 50px 20px 0;
+		box-sizing: border-box;
 	}
 }

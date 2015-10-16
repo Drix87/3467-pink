@@ -1,7 +1,5 @@
 .promo {
-	@include mobile;
-	padding-bottom: 295px;
-	background: $bg-side url("../img/iphone-bg.png") center 740px no-repeat;
+	background: $bg-side url("../img/iphone-bg.png") center 735px no-repeat;
 	background-size: 157px 320px;
 	overflow: hidden;
 	position: relative;
@@ -50,5 +48,16 @@
 
 	&__feature-title {
 		font-size: $font-h2;
+	}
+}
+
+@media (max-width: $mobile) {
+
+	.promo {
+		width: $mobile; 
+		margin: 0 auto;
+		text-align: center;
+		padding: 0 20px 295px;
+		box-sizing: border-box;
 	}
 }
