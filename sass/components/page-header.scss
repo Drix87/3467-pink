@@ -1,0 +1,45 @@
+.page-header {
+	background: url("../img/header-bg.jpg") no-repeat;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		box-sizing: border-box;
+		padding: 20px;
+		background-color: rgba(29, 38, 49, 0.7);
+	}
+
+	&__title {
+		color: $text-white;
+		font-size: $font-h1;
+		font-weight: 200;
+		padding-top: 105px;
+	}
+
+	&:after {
+		content: "";
+		background: url("../img/iphone_mockup.png") no-repeat;
+		display: block;
+		width: 293px;
+		height: 313px;
+		position: relative;
+		left: -44px;
+		top: 28px;
+	}
+	
+	@media (max-width: $mobile) {
+		
+			width: $mobile; 
+			margin: 0 auto;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 0 20px;	
+	}
+}

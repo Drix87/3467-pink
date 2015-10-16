@@ -1,0 +1,38 @@
+//Usage: @include font-face('Kent Medium','KentMed', normal (optional), bold (optional));
+@mixin font-face($fontname,$filename,$fontstyle: normal,$fontweight: normal) {
+	@font-face {
+	font-family: '#{$fontname}'; 
+	src: url('../font/#{$filename}/#{$filename}.eot'); 
+	src: url('../font/#{$filename}/#{$filename}.eot?#iefix') format('embedded-opentype'),
+		 url('../font/#{$filename}/#{$filename}.woff') format('woff'),
+		 url('../font/#{$filename}/#{$filename}.ttf') format('truetype'), 
+		 url('../font/#{$filename}/#{$filename}.svg##{$filename}') format('svg');
+		//svg id supports mixed case and hyphens inside, see http://j.mp/U7A83a
+
+		font-style: $fontstyle;
+		font-weight: $fontweight;
+	}
+}
+
+
+// // MediaQueries
+// $XS:    321px;
+// $S:     481px;   
+// $M:     768px;
+// $L:     992px;     
+
+// // media queries
+// @mixin MQ($canvas) {
+//   @if $canvas == XS {
+//    @media only screen and (min-width: $XS) { @content; } 
+//   }
+//   @else if $canvas == S {
+//    @media only screen and (min-width: $S) { @content; } 
+//   }
+//   @else if $canvas == M {
+//    @media only screen and (min-width: $M) { @content; } 
+//   }
+//   @else if $canvas == L {
+//    @media only screen and (min-width: $L) { @content; } 
+//   }
+// }
