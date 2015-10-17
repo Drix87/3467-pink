@@ -1,0 +1,54 @@
+.download {
+	background: $dark-blue;
+	color: #ffffff;
+	text-align: center;
+
+	&__list {
+
+		li {
+			display: inline-block;
+
+			&:last-child a {
+				margin-right: 0; 
+			}
+		}
+	}
+
+	&__item {
+		display: block;
+		margin-right: 35px;
+		color: #ffffff;
+		text-decoration: none;
+		text-indent: -999999px; 
+		background: url("../img/Apple-icon.png") no-repeat;
+		width: 46px;
+		height: 57px;
+	}
+
+	&__item-dr {
+		background-image: url("../img/Android-icon.png");
+		width: 42px;
+		height: 47px;
+	}
+
+	&__item-wd {
+		background-image: url("../img/Windows-icon.png");
+		width: 44px;
+		height: 42px;	
+	}
+
+	&__text {
+		font: $font-p;
+		color: $text-white;
+	}
+
+	@media (max-width: $mobile) {
+
+			width: $mobile; 
+			margin: 0 auto;
+			text-align: center;
+			padding: 30px 20px 35px;
+			box-sizing: border-box;
+	}
+}
+
