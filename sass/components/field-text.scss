@@ -1,0 +1,33 @@
+.field-text {
+	display: block;
+  margin-bottom: 25px;
+
+	&__text {
+		font-size: $font-h3;
+		color: $text-red;
+		text-transform: uppercase;
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 15px;
+	}
+
+	&__text--center {
+		margin-bottom: 0;
+		margin-top: 15px;
+		text-align: center;
+	}
+
+	input[type=text] {
+		border: 2px solid $border-color;
+		padding: 20px;
+		width: 100%;
+		font-size: $font-h2;
+		height: 63px;
+		@include input-placeholder($text-color);
+
+		&:disabled {
+			background: $bg-side;
+		}
+	}
+
+}

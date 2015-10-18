@@ -1,0 +1,37 @@
+.field-radio {
+	display: block;
+	position: relative;
+	margin-bottom: 30px;
+	line-height: 43px;
+
+	input[type="radio"] {
+		display: none;
+	}
+
+	&__text {
+		padding-left: 60px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+	    width: 35px;
+	    height: 35px;
+	    border: 2px solid $border-color;
+	    border-radius: 50%;
+	    background: $text-white;
+	    cursor: pointer;
+		}
+	}
+
+	input[type="radio"]:checked ~ &__text::after {
+				content: '';
+				position: absolute;
+		    width: 15px;
+		    height: 15px;
+		    top: 12px;
+		    left: 12px;
+		    border-radius: 50%;
+		    background: $text-red;
+	}
+}

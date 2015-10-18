@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css">-->
+   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-form">
   <header class="page-header">
-    <div class="page-header__inner">
+    <div class="page-header__inner"> 
       <a class="logo" href="#">Logo</a>
       <nav class="main-nav">
         <ul class="main-nav__list">
@@ -25,17 +25,20 @@
             <a href="#">Стоимость</a>
           </li>
         </ul>
-        <a href="" class="main-nav__hamburger" id="toggler">
-          <span></span>
-        </a>
       </nav>
+      <a href="" class="main-nav__hamburger" id="toggler">
+        <span></span>
+      </a>
     </div>
-    <p class="main-text">
-      Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-    </p>
+    <div class="page-header__title">
+      Конкурс на самое безбашеное путешествие с Пинк
+    </div>
   </header>
 
   <form action="#" class="main-form">
+    <p class="main-form__text">
+      Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+    </p>
     <fieldset class="main-form__name">
       <label class="field-text">
         <span class="field-text__text">Имя: *</span>
@@ -70,7 +73,7 @@
       <legend>Когда вы путешествовали? *</legend>
       <label class="field-text">
         <input type="text" placeholder="1 апреля 2015">
-        <span class="field-text__text">Дата выезда</span>
+        <span class="field-text__text field-text__text--center">Дата выезда</span>
       </label>
       <label class="field-range">
         <span class="field-range__minus"></span>
@@ -79,42 +82,47 @@
         <span class="field-range__title">Продолжительность</span>
       </label>
       <label class="field-text">
-        <input type="text" disabled placeholder="1 апреля 2015">
-        <span class="field-text__text">Дата возвращения</span>
+        <input type="text" disabled placeholder="1 апреля 2015" disabled>
+        <span class="field-text__text field-text__text--center">Дата возвращения</span>
       </label>
     </fieldset>
     <fieldset class="main-form__partners">
       <legend>Количество попутчиков *</legend>
-      <label class="field-range">
+      <label class="field-range field-range--bordered">
         <span class="field-range__minus"></span>
         <input type="range" disabled value="2 чел">
         <span class="field-range__plus"></span>
       </label>
-      <ul class="main-form__partners-list">
+      <ol class="main-form__partners-list">
         <li class="main-form__partners-item">
           <label class="field-text">
             <span class="field-text__text field-text__text--number">Имя: *</span>
             <input type="text" placeholder="Введите ваше имя">
           </label>
-        </li>
-        <li class="main-form__partners-item">
-          <label class="field-text">
-            <span class="field-text__text">Прозвище:</span>
-            <input type="text" placeholder="Ну как же без этого!">
-          </label>
+          <ul>
+            <li class="main-form__partners-item">
+              <label class="field-text">
+                <span class="field-text__text">Прозвище:</span>
+                <input type="text" placeholder="Ну как же без этого!">
+              </label>
+            </li>
+          </ul>
         </li>
         <li class="main-form__partners-item">
           <label class="field-text">
             <span class="field-text__text field-text__text--number">Имя: *</span>
             <input type="text" placeholder="Введите ваше имя">
           </label>
+          <ul>
+            <li class="main-form__partners-item">
+              <label class="field-text">
+                <span class="field-text__text">Прозвище:</span>
+                <input type="text" placeholder="Ну как же без этого!">
+              </label>
+            </li>
+          </ul>
         </li>
-        <li class="main-form__partners-item">
-          <label class="field-text">
-            <span class="field-text__text">Прозвище:</span>
-            <input type="text" placeholder="Ну как же без этого!"></label>
-        </li>
-      </ul>
+      </ol>
     </fieldset>
     <fieldset class="main-form__features">
       <legend>Ваши безбашенные достижения в путешествии</legend>
@@ -151,49 +159,52 @@
       </label>
       <ul class="photo-list">
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
         <li class="photo-list__item">
-          <img src="" alt="">
-          <span class="photo-list__title"></span>
+          <img src="img/photo1.jpg" height="68" width="67" alt="">
+          <span class="photo-list__title">IMG-1.JPG</span>
           <span class="photo-list__close"></span>
         </li>
       </ul>
     </fieldset>
     <fieldset class="main-form__end">
-      <input class="field-submit" type="submit" value="Отправить форму">
+      <label class="field-submit">
+        <input type="submit" value="Отправить форму">
+        Отправить форму
+      </label>
       <p class="main-form__required">
         <span>*</span>
         — обязательные поля
@@ -201,7 +212,7 @@
     </fieldset>
   </form>
   <footer class="page-footer">
-    <a href="#" class="logo">Logo</a>
+    <a href="#" class="page-footer__logo">Logo</a>
     <ul class="social-links">
       <li>
         <a class="social-links__tw" href="#">Мы в Twitter</a>

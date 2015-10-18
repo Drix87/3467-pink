@@ -1,6 +1,7 @@
 // @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 @import "variables";
 @import "mixins";
+@import "components/reset";
 @import "components/base";
 @import "components/page-header";
 @import "components/main-nav";
@@ -8,7 +9,20 @@
 @import "components/btn-bordered";
 @import "components/promo";
 @import "components/testimonials";
-@import "components/pagination-slider";
+@import "components/pagination-slider"; 
 @import "components/tariff";
 @import "components/contacts";
-@import "components/map"; 
+@import "components/map";
+@import "components/page-form";
+@import "components/main-form";
+@import "components/field-text";
+@import "components/field-radio";
+@import "components/field-range";
+@import "components/field-checkbox";
+@import "components/field-submit";
+@import "components/field-photo";
+@import "components/photo-list";
+@import "components/page-footer";
+@import "components/social-links";
+@import "components/developer-copy";
+

@@ -8,12 +8,26 @@
 		 url('../font/#{$filename}/#{$filename}.ttf') format('truetype'), 
 		 url('../font/#{$filename}/#{$filename}.svg##{$filename}') format('svg');
 		//svg id supports mixed case and hyphens inside, see http://j.mp/U7A83a
-
+ 
 		font-style: $fontstyle;
 		font-weight: $fontweight;
 	}
 }
 
+@mixin input-placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color
+  }
+  &:-moz-placeholder {
+    color: $color
+  }
+  &::-moz-placeholder {//for newer versions of Firefox
+    color: $color
+  }
+  &:-ms-input-placeholder {
+    color: $color
+  }
+}
 
 // // MediaQueries
 // $XS:    321px;

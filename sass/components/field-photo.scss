@@ -1,0 +1,22 @@
+.field-photo {
+	display: block;
+	padding-bottom: 25px;
+	margin-bottom: 35px;
+	border-bottom: 2px solid $border-color;
+	
+	input[type=file] {
+		display: none;
+	}
+
+	&__text {
+		display: block;
+    border: 2px solid $border-color;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background: $text-white;
+    font: 18px "Open SansBold", Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+	}
+}

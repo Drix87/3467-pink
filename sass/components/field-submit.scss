@@ -1,0 +1,17 @@
+.field-submit {
+	display: block;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 3px;
+	color: $text-white;
+	background: #2aab6d;
+	margin-bottom: 45px;
+	font-size: $font-h2;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	input[type=submit] {
+		display: none;
+	}
+}

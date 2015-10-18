@@ -1,10 +1,13 @@
 @include font-face('Open SansRegular','OpenSansRegular');
 @include font-face('Open SansLight','OpenSansLight');
-@include font-face('Open SansBold','OpenSansBold');
+@include font-face('Open SansBold','OpenSansBold', normal, bold);
+
+* {
+	box-sizing: border-box;
+}
 
 body {
 	font-family: "Open SansRegular", Arial, sans-serif;
-	box-sizing: border-box;
 }
 
 ul {
@@ -18,5 +21,9 @@ blockquote {
 }
 
 h1{
+	margin: 0;
+}
+ 
+p {
 	margin: 0;
 }
