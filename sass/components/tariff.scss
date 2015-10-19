@@ -11,10 +11,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		// width: 326px;
-		// transform: rotate(-6deg);
-		// margin-top: -58px;
-		// margin-left: -20px;
 		background: $text-white;
 	}
 
@@ -66,7 +62,7 @@
 		}
 
 		tbody {
-			
+
 			tr {
 				border: 2px solid $border-color;
 			}
@@ -85,7 +81,7 @@
 	}
 
 	&__item--hit {
-		
+
 		&:before {
 			content: 'Хит';
 		    display: inline-block;
@@ -110,22 +106,21 @@
 
 	&__item-icon {
 		display: block;
-		background: url("../img/yes.png") no-repeat;
+		background: url("../img/yes-green.svg") no-repeat;
 		width: 29px;
 		height: 22px;
 		text-indent: -9999px;
 	}
 
 	&__item-icon--negative {
-		background: url("../img/no.png") no-repeat;
+		background: url("../img/no-red.svg") no-repeat;
 		width: 26px;
 		height: 26px;
 	}
 
 	@media (max-width: $mobile) {
-
-			width: $mobile; 
-			margin: 0 auto;
+			width: $mobile;
+			margin: 0 auto 50px;
 			text-align: center;
 			padding: 120px 20px 40px;
 			box-sizing: border-box;

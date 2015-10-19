@@ -11,18 +11,22 @@
 		text-indent: -99999px;
 		height: 56px;
 		width: 56px;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    background-position: center center;
+    margin-right: 10px;
 
 	}
-	
+
 	&__tw {
-		background: url(../img/tw-icon.png) no-repeat;
+		background: url(../img/twitter-red.svg) no-repeat;
 	}
 
 	&__fb {
-		background: url(../img/fb-icon.png) no-repeat;
+		background: url(../img/facebook-red.svg) no-repeat;
 	}
 
 	&__yt {
-		background: url(../img/yt-icon.png) no-repeat;
+		background: url(../img/youtube-red.svg) no-repeat;
 	}
 }

@@ -1,5 +1,9 @@
 .testimonials {
 
+  &__list {
+    margin-bottom: 35px;
+  }
+
 	&__blockquote {
 		display: flex;
 		flex-direction: column-reverse;
@@ -17,7 +21,7 @@
 
 	@media (max-width: $mobile) {
 
-			width: $mobile; 
+			width: $mobile;
 			margin: 0 auto;
 			text-align: center;
 			padding: 50px 20px 0;

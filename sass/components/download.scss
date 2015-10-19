@@ -4,12 +4,14 @@
 	text-align: center;
 
 	&__list {
+    margin-bottom: 25px;
 
 		li {
 			display: inline-block;
+      vertical-align: bottom;
 
 			&:last-child a {
-				margin-right: 0; 
+				margin-right: 0;
 			}
 		}
 	}
@@ -19,22 +21,22 @@
 		margin-right: 35px;
 		color: #ffffff;
 		text-decoration: none;
-		text-indent: -999999px; 
-		background: url("../img/Apple-icon.png") no-repeat;
+		text-indent: -999999px;
+		background: url("../img/apple-logo.svg") no-repeat;
 		width: 46px;
 		height: 57px;
 	}
 
 	&__item-dr {
-		background-image: url("../img/Android-icon.png");
+		background-image: url("../img/android-logo.svg");
 		width: 42px;
 		height: 47px;
 	}
 
 	&__item-wd {
-		background-image: url("../img/Windows-icon.png");
+		background-image: url("../img/microsoft-logo.svg");
 		width: 44px;
-		height: 42px;	
+		height: 42px;
 	}
 
 	&__text {
@@ -44,7 +46,7 @@
 
 	@media (max-width: $mobile) {
 
-			width: $mobile; 
+			width: $mobile;
 			margin: 0 auto;
 			text-align: center;
 			padding: 30px 20px 35px;

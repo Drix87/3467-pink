@@ -13,8 +13,10 @@
 	}
 
 	&__item-title {
+    display: block;
 		font-size: $font-h2;
 		font-weight: bold;
+    margin-bottom: 10px;
 	}
 
 	&__item-content {
@@ -23,12 +25,12 @@
 		color: $text-red;
 		font-weight: 200;
 		text-decoration: none;
-		
+		font-family: "Open SansLight", Arial, sans-serif;
 	}
 
 	@media (max-width: $mobile) {
 
-			width: $mobile; 
+			width: $mobile;
 			margin: 0 auto;
 			text-align: center;
 			padding: 0 20px;

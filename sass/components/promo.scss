@@ -1,9 +1,9 @@
 .promo {
-	background: $bg-side url("../img/iphone-bg.png") center 735px no-repeat;
+	background: $bg-side url("../img/iphone-bg.png") center 638px no-repeat;
 	background-size: 157px 320px;
 	overflow: hidden;
 	position: relative;
-	
+
 	&__title {
 		font-size: $font-h1;
 		font-weight: 200;
@@ -32,18 +32,22 @@
 			height: 53px;
 			width: 326px;
 			transform: rotate(-6deg);
-			margin-top: -58px;
+			margin-top: -80px;
 			margin-left: -20px;
 			background: $bg-side;
 		}
 
-		p { 
+		p {
 			font: $font-p;
 		}
 	}
 
 	&__features-item {
 		margin-bottom: 30px;
+
+    &:first-child {
+      padding-top: 10px;
+    }
 	}
 
 	&__feature-title {
@@ -52,10 +56,10 @@
 
 	@media (max-width: $mobile) {
 
-			width: $mobile; 
+			width: $mobile;
 			margin: 0 auto;
 			text-align: center;
-			padding: 0 20px 295px;
+			padding: 0 20px 280px;
 			box-sizing: border-box;
 	}
 }

@@ -3,6 +3,10 @@
 	margin-bottom: 25px;
 	position: relative;
 
+  &__inner {
+    display: flex;
+  }
+
 	&__title {
 		font-size: $font-h3;
 		color: $text-red;
@@ -13,25 +17,70 @@
     text-align: center;
 	}
 
+	input[type=text] {
+		border: 2px solid $border-color;
+    padding: 20px;
+    width: 100%;
+    font-size: $font-h2;
+    height: 63px;
+    @include input-placeholder($text-color);
+    text-align: center;
+    border-left: none;
+    border-right: none;
 
-	input[type=range] {
-		// display: none;
-	}	
-
-	input[type=range]:before {
-		position: absolute;
-	  top: -17px;
-	  left: 50%;
-	  margin-left: -10px;
-	  content: attr(value);
-	  display: block;
-	  text-align: center;
-	  width: 20px;
-	  height: 10px;
+    &:disabled {
+      background: $bg-side;
+    }
 	}
 
 	&--bordered {
 		padding-bottom: 25px;
 		border-bottom: 2px solid $border-color;
 	}
+
+  &__minus,
+  &__plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 61px;
+    height: 63px;
+    border: 2px solid $border-color;
+    cursor: pointer;
+    background: $text-white;
+  }
+
+  &__minus {
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 27px;
+      height: 3px;
+      background: $text-color;
+    }
+  }
+
+  &__plus {
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 27px;
+      height: 3px;
+      background: $text-color;
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 23px;
+      background: $text-color;
+      position: relative;
+      left: -13px;
+    }
+
+  }
 }

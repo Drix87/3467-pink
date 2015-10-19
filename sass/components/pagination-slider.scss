@@ -21,4 +21,19 @@
 		border: 3px solid $text-color;
 		background-color: transparent;
 	}
+
+  &--gray {
+
+    .pagination-slider__item {
+      border-color: $bg-side;
+
+      &:hover {
+        border-color: $text-color;
+      }
+    }
+
+    .pagination-slider__item--active {
+      border-color: $text-color;
+    }
+  }
 }

@@ -8,8 +8,10 @@
 </head>
 <body class="page-form">
   <header class="page-header">
-    <div class="page-header__inner"> 
-      <a class="logo" href="#">Logo</a>
+    <div class="page-header__inner">
+      <a class="logo" href="#">
+        <img src="img/logotype-white-mobile.svg" width="74" height="23" alt="">
+      </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -76,9 +78,11 @@
         <span class="field-text__text field-text__text--center">Дата выезда</span>
       </label>
       <label class="field-range">
-        <span class="field-range__minus"></span>
-        <input type="range" value="10 дней">
-        <span class="field-range__plus"></span>
+        <div class="field-range__inner">
+          <span class="field-range__minus"></span>
+          <input type="text" value="10 дней">
+          <span class="field-range__plus"></span>
+        </div>
         <span class="field-range__title">Продолжительность</span>
       </label>
       <label class="field-text">
@@ -89,9 +93,11 @@
     <fieldset class="main-form__partners">
       <legend>Количество попутчиков *</legend>
       <label class="field-range field-range--bordered">
-        <span class="field-range__minus"></span>
-        <input type="range" disabled value="2 чел">
-        <span class="field-range__plus"></span>
+        <div class="field-range__inner">
+          <span class="field-range__minus"></span>
+          <input type="text" disabled value="2 чел">
+          <span class="field-range__plus"></span>
+        </div>
       </label>
       <ol class="main-form__partners-list">
         <li class="main-form__partners-item">
@@ -212,7 +218,9 @@
     </fieldset>
   </form>
   <footer class="page-footer">
-    <a href="#" class="page-footer__logo">Logo</a>
+    <a href="#" class="page-footer__logo">
+      <img src="img/logotype-blue-tablet.svg" width="146" height="40" alt="">
+    </a>
     <ul class="social-links">
       <li>
         <a class="social-links__tw" href="#">Мы в Twitter</a>
