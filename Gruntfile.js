@@ -6,6 +6,15 @@ module.exports = function(grunt) {
   var config = {
     pkg: grunt.file.readJSON('package.json'),
 
+    concat: {
+      dist: {
+        src: [
+          'js/components/*.js'
+        ],
+        dest: 'js/script.js',
+      }
+    },
+
     sass: {
       style: {
         files: {
@@ -33,6 +42,13 @@ module.exports = function(grunt) {
           spawn: false,
           livereload: true
         }
+      },
+      scripts: {
+        files: ['js/components/*.js'],
+        tasks: ['concat'],
+        options: {
+          spawn: false,
+        },
       }
     }
   };

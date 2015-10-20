@@ -16,6 +16,7 @@
     "autoprefixer": "6.0.x",
     "grunt": "0.4.x",
     "grunt-contrib-clean": "0.6.x",
+    "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "0.8.x",
     "grunt-contrib-watch": "0.6.x",
     "grunt-lintspaces": "0.7.x",
