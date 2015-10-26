@@ -9,28 +9,34 @@
 <body>
   <header class="page-header">
     <div class="page-header__inner">
-      <a class="logo" href="#">
-        <img src="img/logotype-white-mobile.svg" width="74" height="23" alt="">
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="#">Информация</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Возможности</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Отзывы</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Стоимость</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="" class="main-nav__hamburger" id="toggler">
-        <span></span>
-      </a>
+      <div class="page-header__wrapper">
+        <a class="logo" href="#">
+          <picture>
+            <source media="(min-width:960px)" srcset="img/logotype-white-desktop.svg" width="146" height="40">
+            <source media="(min-width:660px)" srcset="img/logotype-white-tablet.svg" width="146" height="40">
+            <img src="img/logotype-white-mobile.svg"  width="74" height="23" alt="">
+          </picture>
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#">Информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="" class="main-nav__hamburger" id="toggler">
+          <span></span>
+        </a>
+      </div>
     </div>
     <div class="page-header__title">
       Взгляните на жизнь иначе!
@@ -56,40 +62,62 @@
   </section>
 
   <section class="promo">
-    <h1 class="promo__title">
-      <span class="promo__title-text">Устали от серости мегаполиса?</span>
-      <span class="promo__title-text">Нам есть, что вам предложить!</span>
-    </h1>
-    <ul class="promo__features">
-      <li class="promo__features-item">
-        <h2 class="promo__feature-title">Поднимает настроение</h2>
-        <p>
-          Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!
-        </p>
-      </li>
-      <li class="promo__features-item">
-        <h2 class="promo__feature-title">Меняет мир вокруг</h2>
-        <p>
-          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-        </p>
-      </li>
-      <li class="promo__features-item">
-        <h2 class="promo__feature-title">Заводит новых друзей</h2>
-        <p>
-          Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
-        </p>
-      </li>
-    </ul>
+
+      <h1 class="promo__title">
+        <span class="promo__title-text">Устали от серости мегаполиса?</span>
+        <span class="promo__title-text">Нам есть, что вам предложить!</span>
+      </h1>
+      <div class="promo__inner">
+        <ul class="promo__features">
+          <li class="promo__features-item">
+            <h2 class="promo__feature-title">Поднимает настроение</h2>
+            <p>
+              Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!
+            </p>
+          </li>
+          <li class="promo__features-item">
+            <h2 class="promo__feature-title">Меняет мир вокруг</h2>
+            <p>
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+          </li>
+          <li class="promo__features-item">
+            <h2 class="promo__feature-title">Заводит новых друзей</h2>
+            <p>
+              Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+          </li>
+        </ul>
+      </div>
+  </section>
+
+  <section class="research">
+      <div class="research__wrapper">
+        <div class="research__img">
+          &nbsp;
+        </div>
+        <div class="research__inner">
+          <h1 class="research__title">
+            Эффект<br> на 24 часа!
+          </h1>
+          <p class="research__text">
+            Британские ученные провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+          </p>
+          <a href="#" class="research__link">Узнать больше об исследовании</a>
+        </div>
+      </div>
   </section>
 
   <section class="testimonials">
     <ul class="testimonials__list">
-      <li class="testimonials__item">
+      <li class="testimonials__item testimonials__item--active">
         <blockquote class="testimonials__blockquote">
           <p>
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
-          <footer>Николай Петров</footer>
+          <footer>Николай Петров
+            <p>25 лет, водитель трамвая</p>
+          </footer>
         </blockquote>
       </li>
       <li class="testimonials__item">
@@ -117,7 +145,43 @@
   </section>
 
   <section class="tariff">
-    <div class="tariff__items">
+    <div class="tariff__inner">
+      <div class="tariff__items">
+      <table class="tariff__item">
+        <thead>
+          <tr>
+            <td colspan="2">
+              <span class="tariff__item-text">База</span> <strong>1,99 USD</strong>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="tariff__item-text">Розовый фильтр</span>
+            </td>
+            <td>
+              <span class="tariff__item-icon">Есть</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tariff__item-text">Смайлики</span>
+            </td>
+            <td>
+              <span class="tariff__item-icon">Есть</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="tariff__item-text">Комментарии</span>
+            </td>
+            <td>
+              <span class="tariff__item-icon tariff__item-icon--negative">Нету</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <table class="tariff__item tariff__item--hit">
         <thead>
           <tr>
@@ -157,7 +221,8 @@
         <thead>
           <tr>
             <td colspan="2">
-              <span class="tariff__item-text">Стандарт</span> <strong>3,99 USD</strong>
+              <span class="tariff__item-text">Анлим </span>
+              <strong>9,99 USD</strong>
             </td>
           </tr>
         </thead>
@@ -188,42 +253,7 @@
           </tr>
         </tbody>
       </table>
-      <table class="tariff__item">
-        <thead>
-          <tr>
-            <td colspan="2">
-              <span class="tariff__item-text">Стандарт</span>
-              <strong>3,99 USD</strong>
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <span class="tariff__item-text">Розовый фильтр</span>
-            </td>
-            <td>
-              <span class="tariff__item-icon">Есть</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="tariff__item-text">Смайлики</span>
-            </td>
-            <td>
-              <span class="tariff__item-icon">Есть</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="tariff__item-text">Комментарии</span>
-            </td>
-            <td>
-              <span class="tariff__item-icon tariff__item-icon--negative">Нету</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      </div>
     </div>
     <div class="pagination-slider pagination-slider--gray">
       <span class="pagination-slider__item pagination-slider__item--active"></span>

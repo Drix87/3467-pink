@@ -1,0 +1,100 @@
+.research {
+  display: none;
+  position: relative;
+  padding: 55px 20px 0;
+
+  &__wrapper {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+
+    @media (min-width: $tablet) {
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+        display: flex;
+        padding-left: 45px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+
+    @media (min-width: $desktop) {
+      max-width: 960px;
+      width: auto;
+      margin: 0 auto;
+      padding-left: 130px;
+    }
+  }
+
+  &__img {
+    width: 298px;
+    height: 345px;
+
+    &:before {
+      content: "24";
+      display: table-cell;
+      box-sizing: border-box;
+      text-align: center;
+      vertical-align: middle;
+      width: 220px;
+      height: 221px;
+      border: 10px solid $text-red;
+      border-radius: 50%;
+      color: $text-red;
+      background: $text-white;
+      font-size: 105px;
+      position: relative;
+      top: 87px;
+      left: 39px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      background: url("../img/timer-gray.svg") no-repeat;
+      width: 298px;
+      height: 345px;
+      position: absolute;
+      top: 55px;
+    }
+
+    @media (min-width: $desktop) {
+
+      &:after {
+        top: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 35px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    line-height: 24px;
+  }
+
+  &__link {
+    color: $text-red;
+  }
+
+  @media (min-width: $tablet) {
+    display: block;
+    display: flex;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+    padding-bottom: 60px;
+    background: $bg-side;
+  }
+}

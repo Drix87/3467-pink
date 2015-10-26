@@ -1,15 +1,65 @@
 .contacts {
 	margin-bottom: 40px;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 
 	&__header {
 		font-size: $font-h1;
 		font-weight: 200;
+    line-height: 28px;
 		background: $text-white;
-		margin-bottom: 30px;
+		margin-bottom: 35px;
+    font-family: "Open SansLight", Arial, sans-serif;
+
+    @media (min-width: $tablet) {
+      font-size: 40px;
+      width: 400px;
+      margin: 0 auto 35px;
+      line-height: 47px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 50px;
+      width: 500px;
+      line-height: 60px;
+      margin-bottom: 60px;
+    }
 	}
 
+  &__list {
+
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
 	&__item {
-		margin-bottom: 20px;
+		margin-bottom: 25px;
+    width: 300px;
+    padding: 0 20px;
+
+    @media (min-width: $tablet) {
+      padding: inherit;
+
+      &:last-child {
+        width: 250px;
+      }
+    }
+
+    @media (min-width: $desktop) {
+        order: 3;
+
+        &:first-child {
+          order: 1;
+        }
+
+        &:last-child {
+          order: 2;
+        }
+    }
 	}
 
 	&__item-title {
@@ -17,23 +67,29 @@
 		font-size: $font-h2;
 		font-weight: bold;
     margin-bottom: 10px;
+
+
+    @media (min-width: $desktop) {
+      margin-bottom: 30px;
+    }
 	}
 
 	&__item-content {
 		display: block;
 		font-size: $font-h1;
+    line-height: 26px;
 		color: $text-red;
 		font-weight: 200;
 		text-decoration: none;
 		font-family: "Open SansLight", Arial, sans-serif;
 	}
 
-	@media (max-width: $mobile) {
-
-			width: $mobile;
+	@media (min-width: $mobile) {
+      width: $mobile;
 			margin: 0 auto;
-			text-align: center;
-			padding: 0 20px;
-			box-sizing: border-box;
 	}
+
+    @media (min-width: $tablet) {
+        width: auto;
+    }
 }

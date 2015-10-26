@@ -1,7 +1,38 @@
 .testimonials {
+  text-align: center;
+  padding: 50px 20px 0;
+  box-sizing: border-box;
 
   &__list {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+
+    @media (min-width: $desktop) {
+      padding: 0 130px;
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        background: url("../img/review-arrow-right--gray.svg") no-repeat;
+        position: absolute;
+        top: 50%;
+        margin-top: -21px;
+        width: 22px;
+        height: 42px;
+      }
+
+      &:before {
+        transform: rotate(-180deg);
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
   }
 
 	&__blockquote {
@@ -9,22 +40,70 @@
 		flex-direction: column-reverse;
 		text-align: center;
 
-		p {
-			font: $font-p;
+    @media (min-width: $tablet) {
+      flex-direction: column;
+    }
+
+		>p {
+			font: 14px/30px "Open SansLight", Arial, sans-serif;
+      margin-bottom: 40px;
+
+      @media (min-width: $tablet) {
+        font-size: 18px;
+      }
+
+      @media (min-width: $desktop) {
+
+        &:before {
+          content: "";
+          background: url("../img/quotes--gray.svg") no-repeat;
+          display: block;
+          width: 79px;
+          height: 64px;
+          margin: 0 auto 50px;
+        }
+      }
 		}
 
 		footer {
 			font-size: $font-h2;
 			font-weight: bold;
+      margin-bottom: 20px;
+
+      p {
+        display: none;
+      }
+
+      @media (min-width: $tablet) {
+        font-size: 20px;
+        margin-bottom: 0;
+
+        p {
+          display: block;
+          font: 14px/30px "Open SansLight", Arial, sans-serif;
+          margin-top: 8px;
+        }
+      }
 		}
 	}
 
-	@media (max-width: $mobile) {
+  &__item {
+    display: none;
+  }
 
-			width: $mobile;
-			margin: 0 auto;
-			text-align: center;
-			padding: 50px 20px 0;
-			box-sizing: border-box;
+  &__item--active {
+    display: block;
+  }
+
+	@media (min-width: $mobile) {
+			min-width: $mobile;
+			margin: 0 auto 30px;
 	}
+
+  @media (min-width: $desktop) {
+
+    .pagination-slider {
+      display: none;
+    }
+  }
 }

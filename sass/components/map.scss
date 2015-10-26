@@ -2,6 +2,9 @@
 	position: relative;
   width: 100%;
   height: 200px;
+  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
 
 	&:before {
 		content: "";
@@ -19,8 +22,5 @@
 
 			width: $mobile;
 			margin: 0 auto;
-			text-align: center;
-			padding: 0;
-			box-sizing: border-box;
 	}
 }

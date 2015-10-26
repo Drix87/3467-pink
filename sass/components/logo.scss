@@ -1,0 +1,15 @@
+.logo {
+
+  img {
+
+    path:hover{
+      fill:red;
+    }
+
+    @media (min-width: $tablet) {
+        width: 146px;
+        height: 40px;
+
+    }
+  }
+}

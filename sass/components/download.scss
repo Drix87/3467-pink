@@ -2,9 +2,14 @@
 	background: $dark-blue;
 	color: #ffffff;
 	text-align: center;
+  padding: 30px 20px 47px;
 
 	&__list {
     margin-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 36px;
+    }
 
 		li {
 			display: inline-block;
@@ -40,17 +45,30 @@
 	}
 
 	&__text {
-		font: $font-p;
+		font-family: "Open SansLight", Arial, sans-serif;
+    font-size: 14px;
 		color: $text-white;
+
+    @media (min-width: $tablet) {
+      font-size: 18px;
+      line-height: 24px;
+      width: 300px;
+    }
 	}
 
-	@media (max-width: $mobile) {
+	@media (min-width: $mobile) {
 
-			width: $mobile;
+			min-width: $mobile;
 			margin: 0 auto;
 			text-align: center;
-			padding: 30px 20px 35px;
 			box-sizing: border-box;
 	}
+
+  @media (min-width: $tablet) {
+      position: absolute;
+      top: 350px;
+      background: none;
+      width: 319px;
+    }
 }
 
