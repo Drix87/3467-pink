@@ -8,6 +8,7 @@
       border: 1px solid $border-color;
       width: 620px;
       margin: 0 auto 60px;
+      padding: 25px 58px 0;
     }
 	}
 
@@ -53,10 +54,11 @@
   }
 
 	&__name {
-		padding: 0 20px;
+
 
     @media (min-width: $tablet) {
       border: none !important;
+      padding: 0 !important;
     }
 	}
 
@@ -66,7 +68,6 @@
 
     @media (min-width: $tablet) {
       background: $text-white;
-      padding-top: 25px;
     }
 	}
 
@@ -74,7 +75,6 @@
 		padding: 70px 20px 15px;
 
     @media (min-width: $tablet) {
-      padding-top: 25px;
     }
 	}
 
@@ -84,7 +84,6 @@
 
     @media (min-width: $tablet) {
       background: $text-white;
-      padding-top: 25px;
     }
 	}
 
@@ -96,7 +95,7 @@
     }
 
     @media (min-width: $tablet) {
-      padding-top: 25px;
+
     }
 	}
 
@@ -111,7 +110,7 @@
 
     @media (min-width: $tablet) {
       background: $text-white;
-      padding: 25px 58px 10px;
+      padding-bottom: 10px;
     }
 	}
 
