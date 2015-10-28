@@ -127,6 +127,13 @@
 	&__partners-list {
 		overflow: hidden;
 		counter-reset: myCounter;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 83px;
+
+    }
 	}
 
 	&__partners-item {
@@ -175,6 +182,18 @@
 				content: none;
 			}
 		}
+
+    @media (min-width: $tablet) {
+
+      &:before {
+        left: -58px;
+      }
+
+      &:after {
+        left: -83px;
+        border-right: 2px solid $border-color;
+      }
+    }
 	}
 
 	&__required {
