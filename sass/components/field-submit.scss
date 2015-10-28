@@ -10,8 +10,13 @@
 	font-size: $font-h2;
 	font-weight: bold;
 	text-transform: uppercase;
-	
+
 	input[type=submit] {
 		display: none;
 	}
+
+  @media (min-width: $tablet) {
+    width: 300px;
+    float: left;
+  }
 }

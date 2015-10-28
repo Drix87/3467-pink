@@ -1,8 +1,15 @@
 .page-footer {
-	
+
 	&__logo {
 		display: block;
 		text-align: center;
 		margin-bottom: 35px;
 	}
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
 }
