@@ -6,6 +6,14 @@
 		margin-right: 39px;
 		margin-bottom: 25px;
 		position: relative;
+
+    @media (min-width: $tablet) {
+
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
 	}
 
 	&__item:nth-child(3n) {
@@ -43,16 +51,34 @@
 	    transform: rotate(45deg);
 		}
 
-			&:after {
-				content: "";
-				display: block;
-				height: 2px;
-				width: 11px;
-				background: darken($border-color, 10%);
-				position: absolute;
-				top: 14px;
-		    left: 9px;
-		    transform: rotate(-45deg);
-			}
+		&:after {
+			content: "";
+			display: block;
+			height: 2px;
+			width: 11px;
+			background: darken($border-color, 10%);
+			position: absolute;
+			top: 14px;
+	    left: 9px;
+	    transform: rotate(-45deg);
+		}
+
+    @media (min-width: $tablet) {
+      width: 53px;
+      height: 53px;
+      top: -26px;
+      right: -26px;
+
+      &:before,
+      &:after  {
+        width: 22px;
+        top: 24px;
+        left: 14px;
+      }
+    }
 	}
+
+  @media (min-width: $tablet) {
+    justify-content: space-between;
+  }
 }

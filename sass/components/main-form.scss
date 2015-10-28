@@ -3,6 +3,12 @@
 
 	fieldset {
 		border: none;
+
+    @media (min-width: $tablet) {
+      border: 1px solid $border-color;
+      width: 620px;
+      margin: 0 auto 60px;
+    }
 	}
 
 	legend {
@@ -13,38 +19,85 @@
 		margin-bottom: 20px;
     padding: 0 20px;
     position: relative;
-    top: 50px;
+    top: 45px;
     text-transform: uppercase;
+
+    @media (min-width: $tablet) {
+      top: 0;
+    }
 	}
 
 	&__text {
 		font-size: $font-h3;
-	line-height: 30px;
+	  line-height: 30px;
 		text-align: center;
-		padding: 45px 20px 30px;
+		padding: 45px 20px 40px;
+
+    @media (min-width: $tablet) {
+      font-size: $font-h2;
+      width: 520px;
+      margin: 0 auto;
+      padding-top: 90px;
+      padding-bottom: 0;
+    }
 	}
 
+  &__text--mob-hidden {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+      padding-bottom: 46px;
+      padding-top: 0;
+    }
+  }
+
 	&__name {
-		margin-bottom: 20px;
 		padding: 0 20px;
+
+    @media (min-width: $tablet) {
+      border: none !important;
+    }
 	}
 
 	&__app {
 		background: $bg-side;
 		padding: 70px 20px 10px;
+
+    @media (min-width: $tablet) {
+      background: $text-white;
+      padding-top: 25px;
+    }
 	}
 
 	&__when {
 		padding: 70px 20px 15px;
+
+    @media (min-width: $tablet) {
+      padding-top: 25px;
+    }
 	}
 
 	&__partners {
 		background: $bg-side;
-		padding: 70px 20px 20px;
+		padding: 58px 20px 20px;
+
+    @media (min-width: $tablet) {
+      background: $text-white;
+      padding-top: 25px;
+    }
 	}
 
 	&__features {
-		padding: 70px 20px 15px;
+		padding: 70px 20px 0;
+
+    legend {
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: $tablet) {
+      padding-top: 25px;
+    }
 	}
 
 	&__photo {
@@ -53,7 +106,13 @@
 
 		legend {
 			padding: 0;
+      margin-bottom: 5px;
 		}
+
+    @media (min-width: $tablet) {
+      background: $text-white;
+      padding: 25px 58px 10px;
+    }
 	}
 
 	&__end {
@@ -71,6 +130,10 @@
 		width: 219px;
 		float: right;
 		position: relative;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
 
 		&:before {
 			content: "№";

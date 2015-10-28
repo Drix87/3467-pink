@@ -9,28 +9,34 @@
 <body class="page-form">
   <header class="page-header">
     <div class="page-header__inner">
-      <a class="logo" href="#">
-        <img src="img/logotype-white-mobile.svg" width="74" height="23" alt="">
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="#">Информация</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Возможности</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Отзывы</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Стоимость</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="" class="main-nav__hamburger" id="toggler">
-        <span></span>
-      </a>
+      <div class="page-header__wrapper">
+        <a class="logo" href="#">
+          <picture>
+            <source media="(min-width:960px)" srcset="img/logotype-white-desktop.svg" width="146" height="40">
+            <source media="(min-width:660px)" srcset="img/logotype-white-tablet.svg" width="146" height="40">
+            <img src="img/logotype-white-mobile.svg"  width="74" height="23" alt="">
+          </picture>
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#">Информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="" class="main-nav__hamburger" id="toggler">
+          <span></span>
+        </a>
+      </div>
     </div>
     <div class="page-header__title">
       Конкурс на самое безбашеное путешествие с Пинк
@@ -40,6 +46,9 @@
   <form action="#" class="main-form">
     <p class="main-form__text">
       Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+    </p>
+    <p class="main-form__text main-form__text--mob-hidden">
+      Пожалуйста, заполните форму ниже:
     </p>
     <fieldset class="main-form__name">
       <div class="field-text">

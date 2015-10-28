@@ -39,5 +39,8 @@
     top: 12px;
 	}
 
+  @media (min-width: $tablet) {
+    margin-left: 40px;
+  }
 
 }
