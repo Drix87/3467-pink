@@ -1,32 +1,41 @@
 .testimonials {
-  text-align: center;
-  padding: 50px 20px 0;
   box-sizing: border-box;
+  padding: 50px 20px 0;
+
+  text-align: center;
 
   &__list {
     margin-bottom: 30px;
 
+    @media (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
     @media (min-width: $desktop) {
-      padding: 0 130px;
       position: relative;
+
       max-width: 960px;
       margin: 0 auto;
+      padding: 0 130px;
 
       &:before,
       &:after {
         content: "";
-        display: block;
-        background: url("../img/review-arrow-right--gray.svg") no-repeat;
         position: absolute;
         top: 50%;
-        margin-top: -21px;
+
+        display: block;
         width: 22px;
         height: 42px;
+        margin-top: -21px;
+
+        background: url("../img/review-arrow-right--gray.svg") no-repeat;
       }
 
       &:before {
-        transform: rotate(-180deg);
         left: 0;
+
+        transform: rotate(-180deg);
       }
 
       &:after {
@@ -35,57 +44,73 @@
     }
   }
 
-	&__blockquote {
-		display: flex;
-		flex-direction: column-reverse;
-		text-align: center;
+  &__blockquote {
+    display: flex;
+    flex-direction: column-reverse;
+
+    text-align: center;
 
     @media (min-width: $tablet) {
       flex-direction: column;
     }
 
-		>p {
-			font: 14px/30px "Open SansLight", Arial, sans-serif;
-      margin-bottom: 40px;
+    > p {
+      font-size: $font-h3;
+      line-height: 29px;
+
+      @include OpenSansRegular;
 
       @media (min-width: $tablet) {
         font-size: 18px;
+        margin-bottom: 40px;
       }
 
       @media (min-width: $desktop) {
-
         &:before {
           content: "";
-          background: url("../img/quotes--gray.svg") no-repeat;
+
           display: block;
           width: 79px;
           height: 64px;
           margin: 0 auto 50px;
+
+          background: url("../img/quotes--gray.svg") no-repeat;
         }
       }
-		}
+    }
 
-		footer {
-			font-size: $font-h2;
-			font-weight: bold;
+    footer {
       margin-bottom: 20px;
+
+      font-weight: bold;
+      font-size: $font-h2;
 
       p {
         display: none;
       }
 
       @media (min-width: $tablet) {
-        font-size: 20px;
         margin-bottom: 0;
+
+        font-size: 20px;
 
         p {
           display: block;
-          font: 14px/30px "Open SansLight", Arial, sans-serif;
-          margin-top: 8px;
+          margin-top: 15px;
+          font-size: $font-h3;
+          @include OpenSansLight;
         }
       }
-		}
-	}
+
+      @media (min-width: $desktop) {
+        font-size: $font-h1;
+
+        p {
+          font-size: $font-h2;
+        }
+      }
+    }
+  }
 
   &__item {
     display: none;
@@ -95,12 +120,14 @@
     display: block;
   }
 
-	@media (min-width: $mobile) {
-			min-width: $mobile;
-			margin: 0 auto 30px;
-	}
+  @media (min-width: $mobile) {
+    min-width: $mobile;
+    margin: 0 auto 20px;
+  }
 
   @media (min-width: $desktop) {
+    padding-top: 70px;
+    margin-bottom: 40px;
 
     .pagination-slider {
       display: none;

@@ -1,41 +1,60 @@
 .field-radio {
-	display: block;
-	position: relative;
-	margin-bottom: 30px;
-	line-height: 43px;
+  position: relative;
 
-	input[type="radio"] {
-		display: none;
-	}
+  display: block;
+  margin-bottom: 30px;
 
-	&__text {
-		padding-left: 60px;
+  line-height: 43px;
 
-		&:before {
-			content: '';
-			position: absolute;
-			left: 0;
-	    width: 35px;
-	    height: 35px;
-	    border: 2px solid $border-color;
-	    border-radius: 50%;
-	    background: $text-white;
-	    cursor: pointer;
-		}
-	}
+  input[type="radio"] {
+    display: none;
+  }
 
-	input[type="radio"]:checked ~ &__text::after {
-				content: '';
-				position: absolute;
-		    width: 15px;
-		    height: 15px;
-		    top: 12px;
-		    left: 12px;
-		    border-radius: 50%;
-		    background: $text-red;
-	}
+  &__text {
+    padding-left: 60px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      width: 35px;
+      height: 35px;
+
+      background: $text-white;
+      border: 2px solid $border-color;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &:hover {
+
+      &:before {
+        border-color: $text-color;
+      }
+    }
+
+    &:active {
+
+      &:before {
+        border-color: $text-red;
+      }
+    }
+  }
+
+  input[type="radio"]:checked ~ &__text::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 15px;
+    height: 15px;
+
+    background: $text-red;
+    border-radius: 50%;
+  }
 
   @media (min-width: $tablet) {
-
   }
 }

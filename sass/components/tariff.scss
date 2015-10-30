@@ -1,163 +1,186 @@
 .tariff {
-	background: $bg-side;
-	position: relative;
-  text-align: center;
-  padding: 0px 20px 40px;
+  position: relative;
+
   box-sizing: border-box;
+  padding: 115px 20px 40px;
   overflow: hidden;
 
-  &__inner {
+  text-align: center;
 
-    @media (min-width: $tablet) {
-      width: 462px;
-      margin: 0 auto;
-    }
+  background: $bg-side;
 
-    &:before {
-      content: "";
-      width: 0;
-      height: 0;
-      border-top: 225px solid $text-white;
-      border-right: 100px solid transparent;
-      transform: scaleX(30);
-      position: absolute;
-      top: -90px;
-    }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-	&__items {
-		margin-bottom: 25px;
-    padding-top: 100px;
-    overflow: hidden;
-    width: 9999px;
+  &__table {
+    width: 300%;
+    margin-bottom: 25px;
     margin-left: -280px;
 
-    @media (min-width: $tablet) {
-      margin-left: 0;
-      width: auto;
-    }
-	}
+    &-top {
 
-	&__item {
-		width: 280px;
-		border-collapse: collapse;
-		border: 2px solid $border-color;
-		border-top: none;
-		float: left;
-		position: relative;
-		overflow: hidden;
-    float: left;
+      .tariff__table-item {
+        background: $text-color;
+        border-top: none;
+        color: $text-white;
+        text-align: center;
+        overflow: hidden;
 
-		thead {
-			background: $text-color;
-			text-align: center;
-			color: $text-white;
-
-			.tariff__item-text {
-				font-size: $font-h2;
-				font-weight: bold;
-        margin-bottom: 15px;
+        &:after {
+          content: none;
+        }
 
         @media (min-width: $tablet) {
+
+          .tariff__table-text {
+            font: inherit;
+            color: inherit;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .tariff__table-text {
+        @include OpenSansBold;
+        display: block;
+        font-size: $font-h2;
+        margin-bottom: 12px;
+      }
+
+      strong {
+        @include OpenSansLight;
+        font-size: $font-h1;
+        display: block;
+      }
+
+      @media (min-width: $tablet) {
+
+        .tariff__table-item--hidden {
+          @include text-replace;
+          background: $bg-side;
+        }
+
+        .tariff__table-text {
           font-size: 16px;
         }
-			}
 
-			td {
-				padding: 20px 0;
-			}
-
-			strong {
-				font-size: $font-h1;
-				font-weight: 200;
-        font-family: "Open SansLight", Arial, sans-serif;
-			}
-		}
-
-		tbody {
-
-			tr {
-				border: 2px solid $border-color;
-			}
-
-			td {
-				font-size: $font-h3;
-				padding: 20px 0;
-			}
-
-			td:first-child {
-				padding-left: 20px;
-				text-align: left;
-
-        @media (min-width: $tablet) {
-          display: none;
+        strong {
+          font-size: $font-h2;
         }
-			}
-		}
+      }
+
+      @media (min-width: $desktop) {
+
+        strong {
+          font-size: $font-h1;
+        }
+      }
+    }
+
+    &-item {
+      border: 2px solid $border-color;
+      padding: 22px;
+      font-size: $font-h3;
+      text-transform: uppercase;
+      position: relative;
+      text-align: left;
+
+      &:after {
+        content: "";
+        background: url("../img/yes-green.svg") no-repeat;
+        width: 30px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -11px;
+      }
+
+      @media (min-width: $tablet) {
+
+        .tariff__table-text {
+          @include text-replace;
+        }
+
+        &:after {
+          right: inherit;
+          left: 50%;
+          margin-left: -15px;
+        }
+      }
+    }
+
+    &-item--no {
+
+      &:after {
+        background-image: url("../img/no-red.svg");
+        width: 27px;
+        height: 27px;
+      }
+    }
+
+    &-item--hit {
+
+      &:before {
+        content: 'Хит';
+        display: inline-block;
+        color: $text-white;
+        background: $text-red;
+        font-size: $font-h3;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+        position: absolute;
+        top: 10px;
+        text-transform: uppercase;
+        transform: rotateZ(-45deg);
+        left: -32px;
+      }
+    }
+
+    &-item--hidden {
+      display: none;
+
+      @media (min-width: $tablet) {
+        display: table-cell;
+
+        .tariff__table-text {
+          font: inherit;
+          color: inherit;
+          text-transform: none;
+        }
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    &-icon {
+      @include text-replace;
+    }
 
     @media (min-width: $tablet) {
-      width: 154px;
+      width: 100%;
+      margin-left: 0;
     }
-	}
 
-	&__item--hit {
-
-		&:before {
-			content: 'Хит';
-		    display: inline-block;
-		    color: $text-white;
-		    background: $text-red;
-		    font-size: $font-h3;
-		    padding: 10px;
-		    width: 100px;
-		    text-align: center;
-		    position: absolute;
-		    top: 10px;
-		    text-transform: uppercase;
-		    transform: rotateZ(-45deg);
-		    left: -32px;
-
-        @media (min-width: $tablet) {
-          width: 90px;
-          top: 4px;
-          left: -37px;
-        }
-		}
-	}
-
-	&__item-text {
-		display: block;
-		text-transform: uppercase;
-	}
-
-	&__item-icon {
-		display: block;
-		background: url("../img/yes-green.svg") no-repeat;
-		width: 29px;
-		height: 22px;
-		text-indent: -9999px;
-
-    @media (min-width: $tablet) {
-      margin: 0 auto;
+    @media (min-width: $desktop) {
+      max-width: 940px;
+      margin: 0 auto 25px;
     }
-	}
+  }
 
-	&__item-icon--negative {
-		background: url("../img/no-red.svg") no-repeat;
-		width: 26px;
-		height: 26px;
-	}
-
-	@media (min-width: $mobile) {
-			min-width: $mobile;
-			margin: 0 auto 50px;
-	}
+  @media (min-width: $tablet) {
+    padding-top: 90px;
+  }
 
   @media (min-width: $desktop) {
-
-      .pagination-slider {
-        display: none;
-      }
+    padding-top: 155px;
+    padding-bottom: 55px;
   }
 }
-

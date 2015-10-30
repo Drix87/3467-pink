@@ -1,225 +1,228 @@
 .main-form {
   margin-bottom: 50px;
 
-	fieldset {
-		border: none;
+  fieldset {
+    border: none;
 
     @media (min-width: $tablet) {
-      border: 1px solid $border-color;
       width: 620px;
       margin: 0 auto 60px;
       padding: 25px 58px 0;
-    }
-	}
 
-	legend {
-		color: $text-red;
-		font-size: $font-h3;
-		line-height: 18px;
-		text-align: center;
-		margin-bottom: 20px;
-    padding: 0 20px;
+      border: 1px solid $border-color;
+    }
+
+    @media (min-width: $desktop) {
+      width: 940px;
+    }
+  }
+
+  legend {
     position: relative;
     top: 45px;
+
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    font-size: $font-h3;
+    line-height: 18px;
+    text-align: center;
+    color: $text-red;
     text-transform: uppercase;
 
     @media (min-width: $tablet) {
       top: 0;
     }
-	}
+  }
 
-	&__text {
-		font-size: $font-h3;
-	  line-height: 30px;
-		text-align: center;
-		padding: 45px 20px 40px;
+  &__text {
+    padding: 45px 20px 40px;
+
+    font-size: $font-h3;
+    line-height: 30px;
+    text-align: center;
 
     @media (min-width: $tablet) {
-      font-size: $font-h2;
       width: 520px;
       margin: 0 auto;
       padding-top: 90px;
       padding-bottom: 0;
+
+      font-size: $font-h2;
     }
-	}
+
+    @media (min-width: $desktop) {
+      width: 780px;
+    }
+  }
 
   &__text--mob-hidden {
     display: none;
 
     @media (min-width: $tablet) {
       display: block;
-      padding-bottom: 46px;
+      width: auto;
       padding-top: 0;
+      padding-bottom: 45px;
+    }
+
+    @media (min-width: $desktop) {
+      display: inline-block;
+      padding: 0 0 45px;
     }
   }
 
-	&__name {
+  &__app {
+    padding: 70px 20px 10px;
 
-
-    @media (min-width: $tablet) {
-      border: none !important;
-      padding: 0 !important;
-    }
-	}
-
-	&__app {
-		background: $bg-side;
-		padding: 70px 20px 10px;
+    background: $bg-side;
 
     @media (min-width: $tablet) {
       background: $text-white;
     }
-	}
+  }
 
-	&__when {
-		padding: 70px 20px 15px;
-
-    @media (min-width: $tablet) {
-    }
-	}
-
-	&__partners {
-		background: $bg-side;
-		padding: 58px 20px 20px;
-
-    @media (min-width: $tablet) {
-      background: $text-white;
-    }
-	}
-
-	&__features {
-		padding: 70px 20px 0;
+  &__features {
+    padding: 70px 20px 0;
 
     legend {
       margin-bottom: 18px;
     }
 
     @media (min-width: $tablet) {
-
     }
-	}
+  }
 
-	&__photo {
-		background: $bg-side;
-		padding: 70px 20px 10px;
+  &__partners-list {
+    overflow: hidden;
 
-		legend {
-			padding: 0;
-      margin-bottom: 5px;
-		}
-
-    @media (min-width: $tablet) {
-      background: $text-white;
-      padding-bottom: 10px;
-    }
-	}
-
-	&__end {
-		padding: 50px 20px 15px;
-    border: none !important;
-
-    @media (min-width: $tablet) {
-      padding: 50px 0 15px !important;
-    }
-	}
-
-
-	&__partners-list {
-		overflow: hidden;
-		counter-reset: myCounter;
+    counter-reset: myCounter;
 
     @media (min-width: $tablet) {
       display: flex;
       flex-direction: column;
       padding-left: 83px;
-
     }
-	}
 
-	&__partners-item {
-		list-style: none;
-		width: 219px;
-		float: right;
-		position: relative;
+    > .main-form__partners-item {
+      > .field-text {
+        &:after {
+          content: "Удалить";
+          position: absolute;
+          top: 50px;
+          right: -90px;
+
+          display: inline-block;
+
+          cursor: pointer;
+
+          @media (min-width: $desktop) {
+            right: -120px;
+          }
+        }
+      }
+    }
+  }
+
+  &__partners-item {
+    position: relative;
+
+    float: right;
+    width: 219px;
+
+    list-style: none;
 
     &:first-child {
       margin-bottom: 10px;
     }
 
-		&:before {
-			content: "№";
-			position: absolute;
-			left: -38px;
-			font-size: 14px;
-			color: #d22856;
-		}
+    &:before {
+      content: "№";
+      position: absolute;
+      left: -38px;
 
-		&:after {
-			counter-increment: myCounter;
-			content:counter(myCounter);
-			color: $text-color;
-			background: $bg-side;
-			display: inline-block;
-			text-align: center;
-			line-height: 59px;
-			width: 59px;
-			height: 59px;
-			position: absolute;
-			left: -61px;
-			top: 29px;
-			border: 2px solid $border-color;
-			border-right: none;
-		}
+      font-size: 14px;
+      color: #d22856;
+    }
 
-		> ul {
+    &:after {
+      content: counter(myCounter);
+      position: absolute;
+      top: 29px;
+      left: -61px;
 
-			.main-form__partners-item {
-				width: 100%;
-			}
+      display: inline-block;
+      width: 59px;
+      height: 59px;
 
-			.main-form__partners-item:before,
-			.main-form__partners-item:after {
-				content: none;
-			}
-		}
+      line-height: 59px;
+      text-align: center;
+      color: $text-color;
+
+      background: $bg-side;
+      border: 2px solid $border-color;
+      border-right: none;
+
+      counter-increment: myCounter;
+    }
+
+    > ul {
+      .main-form__partners-item {
+        width: 100%;
+      }
+
+      .main-form__partners-item:before,
+      .main-form__partners-item:after {
+        content: none;
+      }
+    }
 
     @media (min-width: $tablet) {
-
       &:before {
         left: -58px;
       }
 
       &:after {
         left: -83px;
+
         border-right: 2px solid $border-color;
       }
     }
-	}
 
-	&__required {
-		text-align: center;
-		font-size: $font-h3;
-		text-transform: uppercase;
+    @media (min-width: $tablet) {
+      width: 300px;
+    }
 
-		span {
-			color: $text-red;
-		}
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+      width: 620px;
+
+      .field-text {
+        input[type=text] {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  &__required {
+    font-size: $font-h3;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      color: $text-red;
+    }
 
     @media (min-width: $tablet) {
       float: right;
+
       line-height: 58px;
     }
-	}
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-

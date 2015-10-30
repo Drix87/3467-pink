@@ -1,14 +1,17 @@
 .developer-copy {
-	text-align: center;
-	line-height: 34px;
-	margin-bottom: 45px;
+  margin-bottom: 45px;
 
-	a {
-		display: inline-block;
-		text-indent: -99999px;
-		background: url(../img/htmlacademy-red.svg) no-repeat;
-		width: 27px;
-		height: 34px;
-		margin-left: 15px;
-	}
+  line-height: 34px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    margin-left: 15px;
+
+    text-indent: -99999px;
+
+    background: url(../img/htmlacademy-red.svg) no-repeat;
+  }
 }

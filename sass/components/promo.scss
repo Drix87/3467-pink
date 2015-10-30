@@ -1,47 +1,56 @@
 .promo {
-  background: $bg-side;
-	overflow: hidden;
-	position: relative;
-  padding: 0 0 280px;
-  text-align: center;
-  box-sizing: border-box;
+  position: relative;
 
-	&__title {
-		font-size: $font-h1;
-		font-weight: 200;
-		background: $text-white;
-		width: 100%;
-		padding: 40px 20px 65px;
-    font-family: "Open SansLight", Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 0 0 280px;
+  overflow: hidden;
+
+  text-align: center;
+
+  background: $bg-side;
+
+  &__title {
+    width: 100%;
+    padding: 40px 20px 5px;
+
+    font-size: $font-h1;
+
+    background: $text-white;
+
+    @include OpenSansLight;
 
     @media (min-width: $tablet) {
-      padding: 60px 20px 123px;
+      padding: 60px 20px 40px;
     }
 
     @media (min-width: $desktop) {
-      padding-bottom: 170px;
+      padding-bottom: 90px;
+      padding-top: 80px;
     }
-	}
+  }
 
   &__inner {
-
     &:after {
       content: "";
-      display: block;
-      background: url("../img/iphone-bg.png") center top no-repeat;
-      background-size: 157px 320px;
       position: absolute;
       bottom: -45px;
+
+      display: block;
       width: 100%;
       height: 320px;
 
+      background: url("../img/iphone-bg.png") center top no-repeat;
+      background-size: 157px 320px;
+
       @media (min-width: $tablet) {
+        top: 160px;
+
+        width: 100%;
+        height: 650px;
+
         background-image: url("../img/iphone-screen-tablet-3@1x.png");
         background-position: 5%;
         background-size: inherit;
-        top: 160px;
-        width: 100%;
-        height: 650px;
       }
 
       @media (min-resolution: 1.5dppx) {
@@ -60,81 +69,75 @@
     }
   }
 
-	&__title-text {
-		display: block;
-		margin-bottom: 30px;
+  &__title-text {
+    display: block;
+    margin-bottom: 30px;
+
     line-height: 28px;
 
     @media (min-width: $tablet) {
-      font-size: 40px;
       margin-bottom: 10px;
+
+      font-size: 40px;
 
       &:last-child {
         width: 400px;
         margin: 0 auto;
+
         line-height: 48px;
       }
     }
 
     @media (min-width: $desktop) {
-      font-size: 50px;
       margin-bottom: 17px;
+
+      font-size: 50px;
 
       &:last-child {
         width: 450px;
+
         line-height: 58px;
       }
     }
-	}
+  }
 
-	&__features {
+  &__features {
     position: relative;
+    padding-top: 30px;
 
-		&:before {
-      content: "";
-      width: 0;
-      height: 0;
-      border-bottom: 110px solid $bg-side;
-      border-left: 33px solid transparent;
-      transform: scaleX(30);
-      position: absolute;
-      top: -110px;
+    p {
+      font-size: 14px;
+      line-height: 24px;
 
-      @media (min-width: $desktop) {
-        border-bottom: 100px solid $bg-side;
-        border-left: 100px solid transparent;
-        top: -100px;
-      }
-
-		}
-
-		p {
-			font: $font-p;
+      @include OpenSansRegular;
 
       @media (min-width: $desktop) {
         font-size: $font-h2;
-        font-family: "Open SansLight", Arial, sans-serif;
         letter-spacing: 0;
+
+        @include OpenSansLight;
       }
-		}
+    }
 
     @media (min-width: $tablet) {
-      width: 320px;
       float: right;
+      width: 320px;
       margin-right: 30px;
     }
 
     @media (min-width: $desktop) {
-      width: inherit;
-      float: none;
-      margin-right: 0;
       display: flex;
+      float: none;
+      width: inherit;
+      margin-right: 0;
+      padding-top: 0;
     }
-	}
+  }
 
-	&__features-item {
-		margin-bottom: 38px;
+  &__features-item {
+    margin-bottom: 38px;
     padding: 0 20px;
+
     letter-spacing: 1px;
 
     &:first-child {
@@ -150,53 +153,54 @@
     }
 
     @media (min-width: $tablet) {
-
       &:last-child {
         margin-bottom: 18px;
       }
     }
 
     @media (min-width: $desktop) {
-      text-align: inherit;
       position: relative;
       top: -90px;
 
+      text-align: inherit;
+
       &:before {
         content: "";
+
         display: block;
-        background: url("../img/iphone-screen-desktop-1@1x.png") no-repeat;
-        margin-bottom: 57px;
         width: 292px;
         height: 302px;
+        margin-bottom: 57px;
+
+        background: url("../img/iphone-screen-desktop-1@1x.png") no-repeat;
       }
 
       &:nth-child(2) {
-
         &:before {
           background: url("../img/iphone-screen-desktop-2@1x.png") no-repeat;
         }
       }
 
       &:last-child {
-
         &:before {
           background: url("../img/iphone-screen-desktop-3@1x.png") no-repeat;
         }
-
       }
     }
-	}
+  }
 
-	&__feature-title {
-		font-size: $font-h2;
-    font-weight: bold;
+  &__feature-title {
     margin-bottom: 15px;
 
+    font-weight: bold;
+    font-size: $font-h2;
+
     @media (min-width: $desktop) {
-      font-size: 30px;
       margin-bottom: 25px;
+
+      font-size: 30px;
     }
-	}
+  }
 
   @media (min-width: $tablet) {
     padding-bottom: 0;

@@ -1,52 +1,40 @@
-//Usage: @include font-face('Kent Medium','KentMed', normal (optional), bold (optional));
-@mixin font-face($fontname,$filename,$fontstyle: normal,$fontweight: normal) {
-	@font-face {
-	font-family: '#{$fontname}'; 
-	src: url('../font/#{$filename}/#{$filename}.eot'); 
-	src: url('../font/#{$filename}/#{$filename}.eot?#iefix') format('embedded-opentype'),
-		 url('../font/#{$filename}/#{$filename}.woff') format('woff'),
-		 url('../font/#{$filename}/#{$filename}.ttf') format('truetype'), 
-		 url('../font/#{$filename}/#{$filename}.svg##{$filename}') format('svg');
-		//svg id supports mixed case and hyphens inside, see http://j.mp/U7A83a
- 
-		font-style: $fontstyle;
-		font-weight: $fontweight;
-	}
+@mixin OpenSansRegular {
+  font-weight: 400;
+  font-family: "Open Sans", Arial, sans-serif;
 }
+
+@mixin OpenSansLight {
+  font-weight: 300;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+@mixin OpenSansBold {
+  font-weight: 700;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+
 
 @mixin input-placeholder($color) {
   &::-webkit-input-placeholder {
-    color: $color
+    color: $color;
   }
   &:-moz-placeholder {
-    color: $color
+    color: $color;
   }
-  &::-moz-placeholder {//for newer versions of Firefox
-    color: $color
+  &::-moz-placeholder {
+    //for newer versions of Firefox
+    color: $color;
   }
   &:-ms-input-placeholder {
-    color: $color
+    color: $color;
   }
 }
 
-// // MediaQueries
-// $XS:    321px;
-// $S:     481px;   
-// $M:     768px;
-// $L:     992px;     
+@mixin text-replace {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
 
-// // media queries
-// @mixin MQ($canvas) {
-//   @if $canvas == XS {
-//    @media only screen and (min-width: $XS) { @content; } 
-//   }
-//   @else if $canvas == S {
-//    @media only screen and (min-width: $S) { @content; } 
-//   }
-//   @else if $canvas == M {
-//    @media only screen and (min-width: $M) { @content; } 
-//   }
-//   @else if $canvas == L {
-//    @media only screen and (min-width: $L) { @content; } 
-//   }
-// }
+  border: 0;
+}

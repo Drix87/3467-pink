@@ -23,6 +23,16 @@ module.exports = function(grunt) {
       }
     },
 
+    csscomb: {
+      style: {
+        options: {
+          config: 'csscomb.json'
+        },
+        expand: true,
+        src: ["sass/**/*.scss"]
+      }
+    },
+
     postcss: {
       options: {
         processors: [

@@ -1,22 +1,43 @@
 .field-photo {
-	display: block;
-	padding-bottom: 25px;
-	margin-bottom: 35px;
-	border-bottom: 2px solid $border-color;
-	
-	input[type=file] {
-		display: none;
-	}
+  display: block;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
 
-	&__text {
-		display: block;
-    border: 2px solid $border-color;
+  border-bottom: 2px solid $border-color;
+
+  input[type=file] {
+    display: none;
+  }
+
+  &__text {
+    display: block;
     padding: 20px;
+
+    font-size: 18px;
     text-align: center;
     text-transform: uppercase;
+
     background: $text-white;
-    font: 18px "Open SansBold", Arial, sans-serif;
-    font-weight: bold;
+    border: 2px solid $border-color;
     cursor: pointer;
-	}
+
+    @include OpenSansBold;
+
+    @media (min-width: $desktop) {
+      color: $text-white;
+
+      background: $text-red;
+      border: none;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      border-color: $text-color;
+    }
+
+    &:active {
+      background: $text-color;
+      color: $text-white;
+    }
+  }
 }

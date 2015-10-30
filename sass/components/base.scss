@@ -1,29 +1,51 @@
-@include font-face('Open SansRegular','OpenSansRegular');
-@include font-face('Open SansLight','OpenSansLight');
-@include font-face('Open SansBold','OpenSansBold', normal, bold);
+
+@font-face {
+  font-weight: 400;              /* разная плотность */
+  font-family: "Open Sans";       /* название одно */
+  font-style: normal;
+
+  src: url("../font/OpenSansRegular/OpenSansRegular.woff2"); /* разные файлы */
+}
+
+@font-face {
+  font-weight: 300;              /* разная плотность */
+  font-family: "Open Sans";       /* название одно */
+  font-style: normal;
+
+  src: url("../font/OpenSansRegular/OpenSansLight.woff2"); /* разные файлы */
+}
+
+@font-face {
+  font-weight: 700;              /* разная плотность */
+  font-family: "Open Sans";       /* название одно */
+  font-style: normal;
+
+  src: url("../font/OpenSansRegular/OpenSansBold.woff2"); /* разные файлы */
+}
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: "Open SansRegular", Arial, sans-serif;
+  @include OpenSansRegular;
 }
 
 ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 blockquote {
-	margin: 0;
+  margin: 0;
 }
 
-h1{
-	margin: 0;
+h1 {
+  margin: 0;
 }
- 
+
 p {
-	margin: 0;
+  margin: 0;
 }

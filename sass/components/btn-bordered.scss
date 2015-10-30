@@ -1,25 +1,28 @@
 .btn-bordered {
-	display: inline-block;
-	margin-bottom: 30px;
-	border-radius: 40px;
-	border: 3px solid $text-white;
-	padding: 15px 43px;
-	font-weight: bold;
-	color: $text-white;
-	text-decoration: none;
-	font-size: 18px;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 15px 43px;
+
+  font-weight: bold;
+  font-size: 18px;
+  color: $text-white;
+  text-decoration: none;
+
+  border: 3px solid $text-white;
+  border-radius: 40px;
 
   &:hover {
-    background: $text-white;
     color: $text-red;
+
+    background: $text-white;
   }
 
   &:active {
+    color: rgba(210, 40, 86, 0.3);
     background: $text-white;
-    color: $text-red;
   }
 
   @media (min-width: $tablet) {
-      margin-bottom: 45px;
-    }
+    margin-bottom: 45px;
+  }
 }

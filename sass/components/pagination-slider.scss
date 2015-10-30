@@ -1,34 +1,32 @@
 .pagination-slider {
+  &__item {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
 
-	&__item {
-		display: inline-block;
-		width: 12px;
-		height: 12px;
-		margin-right: 8px;
-		border-radius: 50%;
-		border: 3px solid $text-white;
-		background-color: $text-gray;
-		box-sizing: border-box;
+    background-color: $text-gray;
+    border: 3px solid $text-white;
+    border-radius: 50%;
 
-		&:hover {
-			cursor: pointer;
-			border: 3px solid $text-color;
-			background-color: transparent;
-		}
-	}
+    &:hover {
+      background-color: #7e868f;
+      cursor: pointer;
+    }
+  }
 
-	&__item--active {
-		border: 3px solid $text-color;
-		background-color: transparent;
-	}
+  &__item--active {
+    background-color: transparent;
+    border: 3px solid $text-color;
+  }
 
   &--gray {
-
     .pagination-slider__item {
       border-color: $bg-side;
 
       &:hover {
-        border-color: $text-color;
+
       }
     }
 

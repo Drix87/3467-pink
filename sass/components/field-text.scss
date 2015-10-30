@@ -1,32 +1,46 @@
 .field-text {
-	display: block;
+  display: block;
   margin-bottom: 25px;
 
-	&__text {
-		font-size: $font-h3;
-		color: $text-red;
-		text-transform: uppercase;
+  &__text {
     display: block;
-    padding-left: 20px;
     margin-bottom: 15px;
-	}
+    padding-left: 20px;
 
-	&__text--center {
-		margin-bottom: 0;
-		margin-top: 15px;
-		text-align: center;
-	}
+    font-size: $font-h3;
+    color: $text-red;
+    text-transform: uppercase;
+  }
 
-	input[type=text] {
-		border: 2px solid $border-color;
-		padding: 20px;
-		width: 100%;
-		font-size: $font-h2;
-		height: 63px;
-		@include input-placeholder($text-color);
+  &__text--center {
+    margin-top: 15px;
+    margin-bottom: 0;
 
-		&:disabled {
-			background: $bg-side;
-		}
-	}
+    text-align: center;
+  }
+
+  input[type=text] {
+    width: 100%;
+    height: 63px;
+    padding: 20px;
+    outline: none;
+
+    font-size: $font-h2;
+
+    border: 2px solid $border-color;
+
+    @include input-placeholder($text-color);
+
+    &:disabled {
+      background: $bg-side;
+    }
+
+    &:hover {
+      border-color: $text-color;
+    }
+
+    &:active {
+      border-color: $text-red;
+    }
+  }
 }

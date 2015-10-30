@@ -1,25 +1,124 @@
 .page-form {
+  .page-header {
+    &:after {
+      content: none;
+    }
+  }
 
-	.page-header {
+  fieldset {
+    @media (min-width: $desktop) {
+      .main-form__inner {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
 
-		&:after {
-			content: none;
-		}
-	}
+    &.main-form__features {
+      .main-form__inner {
+        flex-wrap: wrap;
+      }
 
-	.page-header__title {
-		padding-bottom: 57px;
+      .field-checkbox {
+        width: 270px;
+      }
+    }
+  }
+
+  .page-header__title {
     padding-top: 30px;
+    padding-bottom: 57px;
 
     @media (min-width: $tablet) {
       position: relative;
-      width: 500px;
       top: inherit;
       left: inherit;
-      font-size: 50px;
-      line-height: 59px;
+
+      width: 500px;
       padding-top: 70px;
       padding-bottom: 80px;
+
+      font-size: 50px;
+      line-height: 59px;
     }
-	}
+
+    @media (min-width: $desktop) {
+      width: 750px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .main-form__name {
+    padding: 0 20px;
+
+    @media (min-width: $tablet) {
+      padding: 0;
+
+      border: none;
+    }
+
+    @media (min-width: $desktop) {
+      .field-text {
+        width: 300px;
+      }
+    }
+  }
+
+  .main-form__when {
+    padding: 58px 20px 0;
+
+    @media (min-width: $tablet) {
+      padding: 25px 58px 10px;
+
+      .field-text,
+      .field-range {
+        display: inline-block;
+        width: 240px;
+      }
+
+      .field-range {
+        float: right;
+      }
+    }
+  }
+
+  .main-form__partners {
+    padding: 58px 20px 20px;
+
+    background: $bg-side;
+
+    @media (min-width: $tablet) {
+      padding: 25px 58px 10px;
+
+      background: $text-white;
+    }
+  }
+
+  .main-form__photo {
+    padding: 70px 20px 10px;
+
+    background: $bg-side;
+
+    legend {
+      margin-bottom: 5px;
+      padding: 0;
+    }
+
+    @media (min-width: $tablet) {
+      margin-bottom: 20px;
+      padding: 25px 58px 10px;
+
+      background: $text-white;
+    }
+  }
+
+  .main-form__end {
+    padding: 50px 20px 15px;
+
+    border: none;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 40px;
+      padding: 50px 0 15px;
+    }
+  }
 }

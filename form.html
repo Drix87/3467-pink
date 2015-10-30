@@ -46,57 +46,65 @@
   <form action="#" class="main-form">
     <p class="main-form__text">
       Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-    </p>
-    <p class="main-form__text main-form__text--mob-hidden">
-      Пожалуйста, заполните форму ниже:
+
+      <span class="main-form__text main-form__text--mob-hidden">
+        Пожалуйста, заполните форму ниже:
+      </span>
     </p>
     <fieldset class="main-form__name">
-      <div class="field-text">
-        <span class="field-text__text">Имя: *</span>
-        <input type="text" placeholder="Введите ваше имя">
-      </div>
-      <div class="field-text">
-        <span class="field-text__text">Фамилия: *</span>
-        <input type="text" placeholder="Укажите фамилию">
-      </div>
-      <div class="field-text">
-        <span class="field-text__text">Отчество:</span>
-        <input type="text" placeholder="Ну и отчество тоже">
+      <div class="main-form__inner">
+        <div class="field-text">
+          <span class="field-text__text">Имя: *</span>
+          <input type="text" placeholder="Введите ваше имя">
+        </div>
+        <div class="field-text">
+          <span class="field-text__text">Фамилия: *</span>
+          <input type="text" placeholder="Укажите фамилию">
+        </div>
+        <div class="field-text">
+          <span class="field-text__text">Отчество:</span>
+          <input type="text" placeholder="Ну и отчество тоже">
+        </div>
       </div>
     </fieldset>
     <fieldset class="main-form__app">
       <legend>С каким приложением путешествовали? *</legend>
 
-      <label class="field-radio">
-        <input type="radio" name="app" checked>
-        <span class="field-radio__text">Pink для iOs</span>
-      </label>
-      <label class="field-radio">
-        <input type="radio" name="app">
-        <span class="field-radio__text">Pink для Android</span>
-      </label>
-      <label class="field-radio">
-        <input type="radio" name="app">
-        <span class="field-radio__text">Windows Phone</span>
-      </label>
+      <div class="main-form__inner">
+        <label class="field-radio">
+          <input type="radio" name="app" checked>
+          <span class="field-radio__text">Pink для iOs</span>
+        </label>
+        <label class="field-radio">
+          <input type="radio" name="app">
+          <span class="field-radio__text">Pink для Android</span>
+        </label>
+        <label class="field-radio">
+          <input type="radio" name="app">
+          <span class="field-radio__text">Windows Phone</span>
+        </label>
+      </div>
+
     </fieldset>
     <fieldset class="main-form__when">
       <legend>Когда вы путешествовали? *</legend>
-      <div class="field-text">
-        <input type="text" placeholder="1 апреля 2015">
-        <span class="field-text__text field-text__text--center">Дата выезда</span>
-      </div>
-      <label class="field-range">
-        <div class="field-range__inner">
-          <span class="field-range__minus"></span>
-          <input type="text" value="10 дней">
-          <span class="field-range__plus"></span>
+      <div class="main-form__inner">
+        <div class="field-text">
+          <input type="text" placeholder="1 апреля 2015">
+          <span class="field-text__text field-text__text--center">Дата выезда</span>
         </div>
-        <span class="field-range__title">Продолжительность</span>
-      </label>
-      <div class="field-text">
-        <input type="text" disabled placeholder="1 апреля 2015" disabled>
-        <span class="field-text__text field-text__text--center">Дата возвращения</span>
+        <label class="field-range">
+          <div class="field-range__inner">
+            <span class="field-range__minus"></span>
+            <input type="text" value="10 дней">
+            <span class="field-range__plus"></span>
+          </div>
+          <span class="field-range__title">Продолжительность</span>
+        </label>
+        <div class="field-text">
+          <input type="text" disabled placeholder="1 апреля 2015" disabled>
+          <span class="field-text__text field-text__text--center">Дата возвращения</span>
+        </div>
       </div>
     </fieldset>
     <fieldset class="main-form__partners">
@@ -141,30 +149,32 @@
     </fieldset>
     <fieldset class="main-form__features">
       <legend>Ваши безбашенные достижения в путешествии</legend>
-      <label class="field-checkbox">
-        <input type="checkbox" checked>
-        <span class="field-checkbox__text">Сделал селфи с акулой</span>
-      </label>
-      <label class="field-checkbox">
-        <input type="checkbox" checked>
-        <span class="field-checkbox__text">Обгорел на пляже</span>
-      </label>
-      <label class="field-checkbox">
-        <input type="checkbox">
-        <span class="field-checkbox__text">Видел Чака Норриса</span>
-      </label>
-      <label class="field-checkbox">
-        <input type="checkbox">
-        <span class="field-checkbox__text">Накупил сувениров</span>
-      </label>
-      <label class="field-checkbox">
-        <input type="checkbox" checked>
-        <span class="field-checkbox__text">Удержал башню</span>
-      </label>
-      <label class="field-checkbox">
-        <input type="checkbox">
-        <span class="field-checkbox__text">Разгромил отель</span>
-      </label>
+      <div class="main-form__inner">
+        <label class="field-checkbox">
+          <input type="checkbox" checked>
+          <span class="field-checkbox__text">Сделал селфи с акулой</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox" checked>
+          <span class="field-checkbox__text">Обгорел на пляже</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox">
+          <span class="field-checkbox__text">Видел Чака Норриса</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox">
+          <span class="field-checkbox__text">Накупил сувениров</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox" checked>
+          <span class="field-checkbox__text">Удержал башню</span>
+        </label>
+        <label class="field-checkbox">
+          <input type="checkbox">
+          <span class="field-checkbox__text">Разгромил отель</span>
+        </label>
+      </div>
     </fieldset>
     <fieldset class="main-form__photo">
       <legend>Ваши фотографии из поездки *</legend>

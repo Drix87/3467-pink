@@ -1,87 +1,120 @@
 .field-range {
-	display: block;
-	margin-bottom: 25px;
-	position: relative;
+  position: relative;
+
+  display: block;
+  margin-bottom: 25px;
 
   &__inner {
     display: flex;
   }
 
-	&__title {
-		font-size: $font-h3;
-		color: $text-red;
-		text-transform: uppercase;
+  &__title {
     display: block;
-    padding-left: 20px;
     margin-top: 15px;
-    text-align: center;
-	}
+    padding-left: 20px;
 
-	input[type=text] {
-		border: 2px solid $border-color;
-    padding: 20px;
-    width: 100%;
-    font-size: $font-h2;
-    height: 63px;
-    @include input-placeholder($text-color);
+    font-size: $font-h3;
     text-align: center;
-    border-left: none;
+    color: $text-red;
+    text-transform: uppercase;
+  }
+
+  input[type=text] {
+    width: 100%;
+    height: 63px;
+    padding: 20px;
+
+    font-size: $font-h2;
+    text-align: center;
+
+    border: 2px solid $border-color;
     border-right: none;
+    border-left: none;
+
+    @include input-placeholder($text-color);
 
     &:disabled {
       background: $bg-side;
     }
-	}
 
-	&--bordered {
-		padding-bottom: 50px;
+    @media (min-width: $tablet) {
+      width: 130px;
+
+      background: none;
+      border: none;
+    }
+  }
+
+  &--bordered {
     margin-bottom: 35px;
-		border-bottom: 2px solid $border-color;
-	}
+    padding-bottom: 50px;
+
+    border-bottom: 2px solid $border-color;
+  }
 
   &__minus,
   &__plus {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
     width: 61px;
     height: 63px;
+    padding: 15px;
+
+    background: $text-white;
     border: 2px solid $border-color;
     cursor: pointer;
-    background: $text-white;
+
+
+    &:hover {
+      border-color: $text-color;
+
+    }
+
+    &:active {
+      border-color: $text-color;
+      background: $text-color;
+
+      &:before,
+      &:after {
+        background: $text-white;
+      }
+    }
   }
 
   &__minus {
-
     &:before {
       content: "";
+
       display: inline-block;
       width: 27px;
       height: 3px;
+
       background: $text-color;
     }
   }
 
   &__plus {
-
     &:before {
       content: "";
+
       display: inline-block;
       width: 27px;
       height: 3px;
+
       background: $text-color;
     }
 
     &:after {
       content: "";
+      position: relative;
+      left: -13px;
+
       display: inline-block;
       width: 3px;
       height: 23px;
-      background: $text-color;
-      position: relative;
-      left: -13px;
-    }
 
+      background: $text-color;
+    }
   }
 }

@@ -19,6 +19,7 @@
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "0.8.x",
     "grunt-contrib-watch": "0.6.x",
+    "grunt-csscomb": "^3.1.0",
     "grunt-lintspaces": "0.7.x",
     "grunt-postcss": "0.6.x",
     "grunt-sass": "1.0.x",
